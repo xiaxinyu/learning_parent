@@ -7,5 +7,6 @@
   <packaging>pom</packaging>
   <modules>
     <module>learning-thread</module>
+    <module>learning-design-pattern</module>
   </modules>
 </project>
