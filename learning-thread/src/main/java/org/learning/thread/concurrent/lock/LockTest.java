@@ -1,4 +1,4 @@
-package org.learning.thread.concurrrent.lock;
+package org.learning.thread.concurrent.lock;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
