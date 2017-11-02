@@ -8,5 +8,7 @@
   <modules>
     <module>learning-thread</module>
     <module>learning-design-pattern</module>
+    <module>learning-data-structure</module>
+    <module>learning-algorithm</module>
   </modules>
 </project>
