@@ -1,4 +1,4 @@
-package org.learning.thread.interrupte;
+package org.learning.thread.tradition.interrupte;
 
 public class Test {
 	public static void main(String[] args) {

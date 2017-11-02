@@ -1,4 +1,4 @@
-package org.learning.thread.demo;
+package org.learning.thread.tradition;
 
 class D extends Thread {
 	@Override

@@ -1,4 +1,4 @@
-package org.learning.thread.local;
+package org.learning.thread.concurrent.local;
 
 public class Connection {
 	private static ThreadLocal<Connection> map = new ThreadLocal<Connection>();

@@ -1,4 +1,4 @@
-package org.learning.thread.local;
+package org.learning.thread.concurrent.local;
 
 import java.util.HashMap;
 import java.util.Map;

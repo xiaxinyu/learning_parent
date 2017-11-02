@@ -1,4 +1,4 @@
-package org.learning.thread.pool;
+package org.learning.thread.concurrent.pool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

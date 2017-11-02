@@ -1,4 +1,4 @@
-package org.learning.thread.interrupte;
+package org.learning.thread.tradition.interrupte;
 
 public class MyThread extends Thread {
 	@Override

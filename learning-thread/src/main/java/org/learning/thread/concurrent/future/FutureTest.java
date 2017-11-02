@@ -1,4 +1,4 @@
-package org.learning.thread.future;
+package org.learning.thread.concurrent.future;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
