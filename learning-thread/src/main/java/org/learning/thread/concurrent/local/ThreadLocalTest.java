@@ -2,7 +2,7 @@ package org.learning.thread.concurrent.local;
 
 import java.util.Random;
 
-public class Test2 {
+public class ThreadLocalTest {
 	private static ThreadLocal<String> map = new ThreadLocal<String>();
 	public static void main(String[] args) {
 		for (int i = 0; i < 2; i++) {

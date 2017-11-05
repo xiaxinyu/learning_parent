@@ -1,11 +1,8 @@
 package org.learning.thread.concurrent.local;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 
-public class Test {
-	private static Map<Thread, String> threadData = new HashMap<Thread, String>();
+public class ConnectionTest {
 
 	public static void main(String[] args) {
 		for (int i = 0; i < 2; i++) {
@@ -17,8 +14,6 @@ public class Test {
 					Connection.getConnection().setHost(host);
 					Connection.getConnection().setPort(port);
 
-					threadData.put(Thread.currentThread(), host);
-
 					new A().get();
 					new B().get();
 				}
@@ -29,8 +24,6 @@ public class Test {
 	static class A {
 		public void get() {
 			Thread current = Thread.currentThread();
-			String host = threadData.get(current);
-			System.out.println("A->" + current.getName() + "->" + host);
 			Connection conn = Connection.getConnection();
 			System.out.println("A->Local->" + current.getName() + "->" + conn.getHost() + "->" + conn.getPort());
 		}
@@ -39,8 +32,6 @@ public class Test {
 	static class B {
 		public void get() {
 			Thread current = Thread.currentThread();
-			String host = threadData.get(current);
-			System.out.println("B->" + current.getName() + "->" + host);
 			Connection conn = Connection.getConnection();
 			System.out.println("B->Local->" + current.getName() + "->" + conn.getHost() + "->" + conn.getPort());
 		}
