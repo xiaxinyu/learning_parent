@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Camera and Video Control with HTML5 Example</title>
+<style>
+video, img {
+	display: block;
+	margin: 0 0 20px 0;
+}
+</style>
+<script src="./js/vedio-permission-plugin.js"></script>
+</head>
+<body>
+
+		
+		
+<div>
+	<input id="uploadimg" type="file" accept="image/*" capture="camera" onclick="count()"/>
+</div>
+		
+<script>
+	Permission.check(function(result){
+		if(result == "no_device"){
+			Permission.setlimitCounter(5);
+			Permission.createCounter("summer");
+			Permission.createCounter("winnner");
+		};
+	});
+	
+	function count(){
+		var c1 = Permission.getCounter("summer");
+		var c2 = Permission.getCounter("winnner");
+		c1.calc();
+		c2.calc();
+		if(c1.val() > Permission.getlimitCounter()){
+			alert("popup dialog");
+		}
+		if(c2.val() > Permission.getlimitCounter()){
+			alert("popup dialog");
+		}
+	}
+</script>
+</body>
+</html>
