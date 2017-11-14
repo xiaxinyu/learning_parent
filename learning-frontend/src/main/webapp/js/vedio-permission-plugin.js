@@ -49,6 +49,9 @@
 		this.val = function() {
 			return this.counter;
 		}
+		this.clean = function(){
+			this.counter = 0;
+		}
 	}
 
 	function Map() {

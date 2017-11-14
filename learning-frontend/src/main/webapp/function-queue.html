@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Camera and Video Control with HTML5 Example</title>
+</head>
+<body>
+
+<script>
+	function print1(){
+		console.log(1);
+	}
+	
+	function print2(){
+		console.log(2);
+	}
+	
+	function print3(){
+		console.log(3);
+	}
+	
+	var funcs = new Array();
+	funcs.push(print1);
+	funcs.push(print2);
+	funcs.push(print3);
+	
+	for(var i=0; i<funcs.length;i++){
+		funcs[i]();
+	}
+</script>
+</body>
+</html>
