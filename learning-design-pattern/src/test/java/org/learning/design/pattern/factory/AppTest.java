@@ -1,4 +1,4 @@
-package org.learning.data.structure;
+package org.learning.design.pattern.factory;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

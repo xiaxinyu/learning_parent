@@ -12,5 +12,6 @@
     <module>learning-algorithm</module>
     <module>learning-java-basics</module>
     <module>learning-frontend</module>
+    <module>learning-spring</module>
   </modules>
 </project>
