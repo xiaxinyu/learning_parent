@@ -7,11 +7,15 @@ import org.springframework.stereotype.Service;
 import com.learning.spring.repository.SayHelloDao;
 import com.learning.spring.service.IGiveNameService;
 
+/**
+ * @author summer.xiasz
+ */
 @Service
-public class GiveNameService implements IGiveNameService{
-	private Logger logger = Logger.getLogger(GiveNameService.class);
+public class GiveNameServiceImpl implements IGiveNameService {
+	private Logger logger = Logger.getLogger(GiveNameServiceImpl.class);
 
+	@Override
 	public void giveName(String name) {
 		logger.info("My give name is " + name);
-	}	
+	}
 }
