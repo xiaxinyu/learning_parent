@@ -1,3 +1,7 @@
 INFO main org.learning.design.pattern.proxy.statics.UserProxy - doing somthing before real thing which want to do
 INFO main org.learning.design.pattern.proxy.statics.SummerUserImpl - Hello,Proxy
 INFO main org.learning.design.pattern.proxy.statics.UserProxy - doing somthing after real thing which want to do
+INFO main org.learning.design.pattern.proxy.dynamic.ProxyHandler - doing somthing before real thing which want to do, param=Dynamic Proxy
+INFO main org.learning.design.pattern.proxy.statics.SummerUserImpl - Hello,Dynamic Proxy
+INFO main org.learning.design.pattern.proxy.dynamic.ProxyHandler - doing somthing before real thing which want to do, param=Dynamic Proxy
+INFO main org.learning.design.pattern.proxy.statics.SummerUserImpl - Hello,Dynamic Proxy
