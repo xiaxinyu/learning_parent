@@ -16,11 +16,17 @@ public class ProxyHandler implements InvocationHandler {
 	public void before(String param) {
 		logger.info("doing somthing before real thing which want to do, param=" + param);
 	}
+	
+	public void after(String param){
+		logger.info("doing somthing after real thing which want to do");
+	}
 
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		before((String) args[0]);
-		return method.invoke(targetObject, args);
+		method.invoke(targetObject, args);
+		after((String) args[0]);
+		return null;
 	}
 
 }

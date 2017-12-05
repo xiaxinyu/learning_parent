@@ -8,3 +8,6 @@ INFO main org.learning.design.pattern.proxy.statics.SummerUserImpl - Hello,Dynam
 INFO main org.learning.design.pattern.proxy.dynamic.cglib.CglibDynamicProxy - doing somthing before real thing which want to do
 INFO main org.learning.design.pattern.proxy.statics.SummerUserImpl - Hello,Cglib Dynamic Proxy
 INFO main org.learning.design.pattern.proxy.dynamic.cglib.CglibDynamicProxy - doing somthing after real thing which want to do
+INFO main org.learning.design.pattern.proxy.dynamic.jdk.ProxyHandler - doing somthing before real thing which want to do, param=Dynamic Proxy
+INFO main org.learning.design.pattern.proxy.statics.SummerUserImpl - Hello,Dynamic Proxy
+INFO main org.learning.design.pattern.proxy.dynamic.jdk.ProxyHandler - doing somthing after real thing which want to do
