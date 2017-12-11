@@ -126,3 +126,25 @@ INFO main org.learning.design.pattern.prototype.LightCopyPrototypeTest - origina
 INFO main org.learning.design.pattern.prototype.LightCopyPrototypeTest - cloned object:original object
 INFO main org.learning.design.pattern.prototype.LightCopyPrototypeTest - original object:original object
 INFO main org.learning.design.pattern.prototype.LightCopyPrototypeTest - cloned object:changed object
+INFO main org.learning.design.pattern.decoration.Saler - Analysis market situation.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.BusinessAnalyst - Analysis business request from Salers.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.BusinessAnalyst - Analysis business request from Salers.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.Saler - Analysis market situation.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.BusinessAnalyst - Analysis business request from Salers.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.Tester - Test and submit project.
+INFO main org.learning.design.pattern.decoration.Saler - Analysis market situation.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.BusinessAnalyst - Analysis business request from Salers.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.Tester - Test and submit project.
+INFO main org.learning.design.pattern.decoration.Saler - Analysis market situation.
+INFO main org.learning.design.pattern.decoration.BusinessAnalyst - Analysis business request from Salers.
+INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
+INFO main org.learning.design.pattern.decoration.Tester - Test and submit project.
