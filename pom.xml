@@ -14,5 +14,6 @@
     <module>learning-frontend</module>
     <module>learning-spring</module>
     <module>learning-custom-annotation</module>
+    <module>learning-springboot</module>
   </modules>
 </project>
