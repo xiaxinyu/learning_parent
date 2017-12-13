@@ -155,3 +155,11 @@ INFO main com.learning.design.pattern.composite.CompositeTest - root
     secondLeaf
   thirdNode
     thirdLeaf
+INFO main com.learning.design.pattern.adapter.ChineseAdapter - Running in Chinese environment.
+INFO main com.learning.design.pattern.adapter.JapanTV - Running Japanese Microwave.
+INFO main com.learning.design.pattern.adapter.ChineseAdapter - Running in Chinese environment.
+INFO main com.learning.design.pattern.adapter.JapanMicrowave - Running Japanese TV.
+INFO main com.learning.design.pattern.adapter.ChineseAdapter - Running in Chinese environment.
+INFO main com.learning.design.pattern.adapter.JapanTV - Running Japanese Microwave.
+INFO main com.learning.design.pattern.adapter.ChineseAdapter - Running in Chinese environment.
+INFO main com.learning.design.pattern.adapter.JapanMicrowave - Running Japanese TV.
