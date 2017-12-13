@@ -148,3 +148,10 @@ INFO main org.learning.design.pattern.decoration.Saler - Analysis market situati
 INFO main org.learning.design.pattern.decoration.BusinessAnalyst - Analysis business request from Salers.
 INFO main org.learning.design.pattern.decoration.Programer - Programer work hard to code.
 INFO main org.learning.design.pattern.decoration.Tester - Test and submit project.
+INFO main com.learning.design.pattern.composite.CompositeTest - root
+  firstNode
+    firstLeaf
+  secondNode
+    secondLeaf
+  thirdNode
+    thirdLeaf
