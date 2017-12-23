@@ -163,3 +163,7 @@ INFO main com.learning.design.pattern.adapter.ChineseAdapter - Running in Chines
 INFO main com.learning.design.pattern.adapter.JapanTV - Running Japanese Microwave.
 INFO main com.learning.design.pattern.adapter.ChineseAdapter - Running in Chinese environment.
 INFO main com.learning.design.pattern.adapter.JapanMicrowave - Running Japanese TV.
+INFO main org.learning.design.pattern.observer.SummerObserver - change from null to cloudy in org.learning.design.pattern.observer.SummerObserver
+INFO main org.learning.design.pattern.observer.WinnerObserver - change from null to cloudy in org.learning.design.pattern.observer.WinnerObserver
+INFO main org.learning.design.pattern.observer.SummerObserver - change from cloudy to rainy in org.learning.design.pattern.observer.SummerObserver
+INFO main org.learning.design.pattern.observer.WinnerObserver - change from cloudy to rainy in org.learning.design.pattern.observer.WinnerObserver
