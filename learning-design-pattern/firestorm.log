@@ -170,3 +170,23 @@ INFO main org.learning.design.pattern.observer.WinnerObserver - change from clou
 INFO main org.learning.design.pattern.command.PowerReceiver - execute power command
 INFO main org.learning.design.pattern.command.UpVoiceReceiver - execute down voice command
 INFO main org.learning.design.pattern.command.DownVoiceReceiver - execute up voice command
+INFO main org.learning.design.pattern.state.NormalVoteState - Normal: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.RepeatVoteState - Spiteful: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.RepeatVoteState - Spiteful: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.RepeatVoteState - Spiteful: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.RepeatVoteState - Spiteful: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Repeat: summer vote Chairman Mao, put you in black list.
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Repeat: summer vote Chairman Mao, put you in black list.
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Repeat: summer vote Chairman Mao, put you in black list.
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Repeat: summer vote Chairman Mao, put you in black list.
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Repeat: summer vote Chairman Mao, put you in black list.
+INFO main org.learning.design.pattern.state.NormalVoteState - Normal: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.RepeatVoteState - Repeat: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.RepeatVoteState - Repeat: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.RepeatVoteState - Repeat: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.RepeatVoteState - Repeat: summer vote Chairman Mao
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Spiteful: summer vote Chairman Mao, put you in black list.
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Spiteful: summer vote Chairman Mao, put you in black list.
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Spiteful: summer vote Chairman Mao, put you in black list.
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Spiteful: summer vote Chairman Mao, put you in black list.
+INFO main org.learning.design.pattern.state.SpitefulVoteState - Spiteful: summer vote Chairman Mao, put you in black list.
