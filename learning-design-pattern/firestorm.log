@@ -167,3 +167,6 @@ INFO main org.learning.design.pattern.observer.SummerObserver - change from null
 INFO main org.learning.design.pattern.observer.WinnerObserver - change from null to cloudy in org.learning.design.pattern.observer.WinnerObserver
 INFO main org.learning.design.pattern.observer.SummerObserver - change from cloudy to rainy in org.learning.design.pattern.observer.SummerObserver
 INFO main org.learning.design.pattern.observer.WinnerObserver - change from cloudy to rainy in org.learning.design.pattern.observer.WinnerObserver
+INFO main org.learning.design.pattern.command.PowerReceiver - execute power command
+INFO main org.learning.design.pattern.command.UpVoiceReceiver - execute down voice command
+INFO main org.learning.design.pattern.command.DownVoiceReceiver - execute up voice command
