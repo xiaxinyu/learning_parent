@@ -190,3 +190,11 @@ INFO main org.learning.design.pattern.state.SpitefulVoteState - Spiteful: summer
 INFO main org.learning.design.pattern.state.SpitefulVoteState - Spiteful: summer vote Chairman Mao, put you in black list.
 INFO main org.learning.design.pattern.state.SpitefulVoteState - Spiteful: summer vote Chairman Mao, put you in black list.
 INFO main org.learning.design.pattern.state.SpitefulVoteState - Spiteful: summer vote Chairman Mao, put you in black list.
+INFO main com.learning.design.pattern.template.AbstractShopping - View from Computer
+INFO main com.learning.design.pattern.template.AbstractShopping - Put Cameron in Shopping Cart
+INFO main com.learning.design.pattern.template.AbstractShopping - Pay bill for goods!
+INFO main com.learning.design.pattern.template.AbstractShopping - Sent package by JD
+INFO main com.learning.design.pattern.template.AbstractShopping - View from phone
+INFO main com.learning.design.pattern.template.AbstractShopping - Put food in Shopping Cart
+INFO main com.learning.design.pattern.template.AbstractShopping - Pay bill for goods!
+INFO main com.learning.design.pattern.template.AbstractShopping - Sent package by SF
