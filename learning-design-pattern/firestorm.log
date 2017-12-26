@@ -200,3 +200,7 @@ INFO main com.learning.design.pattern.template.AbstractShopping - Pay bill for g
 INFO main com.learning.design.pattern.template.AbstractShopping - Sent package by SF
 INFO main com.learning.design.pattern.strategy.MemberPrice - Gold members enjoy a 10% discount.
 INFO main com.learning.design.pattern.strategy.StrategyTest - final price is 90.0
+INFO main org.learning.design.pattern.bridge.Box - Generate circular box
+INFO main org.learning.design.pattern.bridge.Goods - Stand for technology.
+INFO main org.learning.design.pattern.bridge.Box - Generate circular box
+INFO main org.learning.design.pattern.bridge.Goods - Stand for friendship.
