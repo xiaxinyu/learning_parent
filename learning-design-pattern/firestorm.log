@@ -204,3 +204,19 @@ INFO main org.learning.design.pattern.bridge.Box - Generate circular box
 INFO main org.learning.design.pattern.bridge.Goods - Stand for technology.
 INFO main org.learning.design.pattern.bridge.Box - Generate circular box
 INFO main org.learning.design.pattern.bridge.Goods - Stand for friendship.
+INFO main org.learning.design.pattern.cof.Auditing - Worker submit an expense, expense is500.0
+INFO main org.learning.design.pattern.cof.Auditing - Teamleader hasn't privilege to approve.
+INFO main org.learning.design.pattern.cof.Auditing - Department manager approves the expense.
+INFO main org.learning.design.pattern.cof.Auditing - No privilege to approve
+INFO main org.learning.design.pattern.cof.Auditing - Worker submit an expense, expense is1500.0
+INFO main org.learning.design.pattern.cof.Auditing - Teamleader hasn't privilege to approve.
+INFO main org.learning.design.pattern.cof.Auditing - Department manager hasn't privilege to approve the expense that the account is over 1000 RMB.
+INFO main org.learning.design.pattern.cof.Auditing - Manager approves the expense.
+INFO main org.learning.design.pattern.cof.Auditing - No privilege to approve
+INFO main org.learning.design.pattern.cof.Auditing - Worker submit an expense, expense is 500.0
+INFO main org.learning.design.pattern.cof.Auditing - Teamleader hasn't privilege to approve.
+INFO main org.learning.design.pattern.cof.Auditing - Department manager approves the expense.
+INFO main org.learning.design.pattern.cof.Auditing - Worker submit an expense, expense is 1500.0
+INFO main org.learning.design.pattern.cof.Auditing - Teamleader hasn't privilege to approve.
+INFO main org.learning.design.pattern.cof.Auditing - Department manager hasn't privilege to approve the expense that the account is over 1000 RMB.
+INFO main org.learning.design.pattern.cof.Auditing - Manager approves the expense.
