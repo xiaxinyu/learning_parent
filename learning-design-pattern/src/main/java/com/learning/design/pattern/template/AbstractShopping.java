@@ -15,7 +15,7 @@ public abstract class AbstractShopping {
 
 	public abstract void send();
 
-	public void bug() {
+	public void buy() {
 		view();
 		createBill();
 		payBill();

@@ -7,7 +7,7 @@ public class TemplateTest {
 	public void testTemplate() {
 		AbstractShopping shopping1 = new SummerShopping();
 		AbstractShopping shopping2 = new WinnerShopping();
-		shopping1.bug();
-		shopping2.bug();
+		shopping1.buy();
+		shopping2.buy();
 	}
 }
