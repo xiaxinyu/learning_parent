@@ -17,20 +17,32 @@ html,body{
 }
 
 .row {
-	width: 100%;
+	width: 90%;
 	height: 30px;
 	line-height: 30px;
 	font-size: 12px;
-	margin: 20px 10px;
+}
+#firstDiv{
+	width: 100%;
+	height:90%;
+}
+#secondDiv{
+    width: 100%;
+	height:10%;
 }
 </style>
 </head>
 <body id="bodyContainer">
-	<div id="dpr" class="row"></div>
-	<div id="physicsSize" class="row"></div>
-	<div id="deviceSize" class="row"></div>
-	<div id="bodySize" class="row"></div>
-	<div id="gapSize" class="row"></div>
+	<div id="firstDiv">
+		<div id="dpr" class="row"></div>
+		<div id="physicsSize" class="row"></div>
+		<div id="deviceSize" class="row"></div>
+		<div id="bodySize" class="row"></div>
+		<div id="gapSize" class="row"></div>
+	</div>
+	<div id="secondDiv">
+		footer
+	</div>
 	<script>
 		$(function() {
 			var dpr = MobileScreen.getDevicePixelRatio();
