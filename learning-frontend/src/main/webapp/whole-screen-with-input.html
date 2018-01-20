@@ -13,13 +13,14 @@
 
 html, body {
 	width: 100%;
-	height: 100%;
-	overflow: hidden;
+	overflow: auto;
+	background-color: lime;
+	margin: 0px;
+	padding: 0px;
 }
 
 .container {
 	width: 100%;
-	height: 100%;
 }
 
 @media screen and (max-width: 768px){
@@ -30,61 +31,78 @@ html, body {
 	}
 }
 
-.header{
-	position: relative;
-	width: 100%;
-	min-height: calc(100% - 45px);
-	height: auto !important;
-	height: 100%; /*IE6不识别min-height*/
+#header{
+	background-color: maroon;
 }
 
-.footer {
+#footer {
 	width: 100%;
-	background-color: #000000;
-	color: #ffffff;
-	height: 45px;
-	line-height: 45px;
+	background-color: navy;
 }
 
 header{
+	width: 100%;
 	background-color: #000000;
 	color: #ffffff;
 	height: 45px;
 	line-height: 45px;
+	margin: 0px;
+	padding: 0px;
 }
 
 .row {
-	height: 30px;
-	line-height: 30px;
 	font-size: 12px;
 }
 </style>
 <script type="text/javascript">
-$(window).bind("load", function() {
-	var footerHeight = 0,
-	footerTop = 0,
-	$footer = $("#footer");
+var $footer = $("#footer");
+$(window).bind("load", function() {	
 	positionFooter();
 	function positionFooter() {
-		footerHeight = $footer.height();
-		footerTop = ( $(window).scrollTop()+$(window).height()-footerHeight)+"px";
-		if ( ($(document.body).height()+footerHeight) < $(window).height()) {
-			$footer.css({
-				position: "absolute",
-				top: footerTop
-			});
-		} else {	
-			$footer.css({
+		var screenHeight = window.screen.height;
+		var windowHeight = $(window).height();
+		if(window.window_height == undefined){
+			window.window_height = windowHeight;
+		}
+		var flag = windowHeight < ((screenHeight/3)*2);
+		if (flag) {
+			setLayoutWithKeyBoard();
+		} else {
+			setLayoutWithoutKeyBoard();
+		}
+	}
+	
+	function setLoyout(){
+		var headerHeight = window.window_height - 45;
+		$("#header").height(headerHeight);
+		$("#footer").height(45);
+		
+		$("#bodyInfo").html(window.screen.height + " " + $(window).height() + " "  + $("body").height());
+		$("#headerInfo").html($("#header").height());		
+		$("#footerInfo").html($("#footer").height() + " " + $("#footer").offset().top);
+	}
+	
+	function setLayoutWithKeyBoard(){
+		setLoyout();
+		$footer.css({
+			position: "absolute",
+			top: ((window.window_height) + "px")
+		});
+	}
+	
+	function setLayoutWithoutKeyBoard(){
+		setLoyout();
+		$footer.css({
 			position: "static"
 		});
 	}
-}
-$(window).scroll(positionFooter).resize(positionFooter);
+	
+	$(window).scroll(positionFooter).resize(positionFooter);
 });
 </script>
 </head>
 <body id="bodyContainer" class="container">
-	<div class="header">
+	<div id="header">
 		<header> I am header </header>
 		<div>
 			<div class="row">
@@ -94,20 +112,14 @@ $(window).scroll(positionFooter).resize(positionFooter);
 				<input type="text">
 			</div>
 			<div class="row">
-				<input type="text">
-			</div>
-			<div class="row">
-				<input type="text">
-			</div>
-			<div class="row">
-				<input type="text">
+				<div id="bodyInfo"></div>
+				<div id="headerInfo"></div>
+				<div id="footerInfo"></div>
 			</div>
 		</div>
 	</div>
 	<div id="footer">
-		<footer class="footer">
-			I am footer
-		</footer>
+		I am footer
 	</div>
 </body>
 </html>

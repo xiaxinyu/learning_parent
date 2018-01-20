@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width,height=device-height, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script>
+	// Window load event used just in case window height is dependant upon images
+
+	$(window)
+			.bind(
+					"load",
+					function() {
+
+						var footerHeight = 0,
+
+						footerTop = 0,
+
+						$footer = $("#footer");
+
+						positionFooter();
+
+						function positionFooter() {
+
+							footerHeight = $footer.height();
+
+							footerTop = ($(window).scrollTop()
+									+ $(window).height() - footerHeight)
+									+ "px";
+
+							if (($(document.body).height() + footerHeight) < $(
+									window).height()) {
+
+								$footer.css({
+
+									position : "absolute",
+
+									top : footerTop,
+
+									left : 0,
+
+								});
+
+							} else {
+
+								$footer.css({
+
+									position : "static"
+
+								});
+
+							}
+
+						}
+
+						$(window).scroll(positionFooter).resize(positionFooter);
+
+					});
+</script>
+</head>
+
+<body>
+
+	<div class="container login">
+		<form class="form-signin" method=POST>
+
+			<div class="login_box">
+				<input class="input-block" type="text" maxlength="18"> <input
+					class="input-block" type="text" maxlength="18"> <input
+					class="input-block" type="text" maxlength="18"> <input
+					class="input-block" type="text" maxlength="18"> 
+			</div>
+
+
+		</form>
+	</div>
+
+	<div id="footer">
+		<span class="login_tips">没有接收到验证码或已更改手机号</span> <span
+			class="login_tips">请拨打客服电话：
+			<p>400-027-1202</p>
+		</span>
+	</div>
+
+</body>
+</html>

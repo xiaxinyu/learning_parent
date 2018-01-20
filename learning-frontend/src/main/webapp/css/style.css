@@ -1,0 +1,12 @@
+body {
+	font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif,"瀹嬩綋";
+}
+input, textarea {  border: 0;  -webkit-appearance: none;box-shadow:none;}
+
+body {  margin:auto; background:#f3f3f3;max-width:640px;min-width:290px; padding:0; display: table; width:100%;}
+
+.container { width:100%;min-height:calc(100% - 60px);height: auto !important;height: 100%; }
+
+#footer {height: 60px;width: 100%;}
+#footer .login_tips { width:100%; color:#b2b2b2; text-align:center; display:block;font-size: 12px; line-height:22px;}
+
