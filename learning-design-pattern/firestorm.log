@@ -222,3 +222,7 @@ INFO main org.learning.design.pattern.cof.Auditing - Department manager hasn't p
 INFO main org.learning.design.pattern.cof.Auditing - Manager approves the expense.
 INFO main com.learning.design.pattern.iterator.IteratorTest - 1
 INFO main com.learning.design.pattern.iterator.IteratorTest - 2
+INFO main org.learning.design.pattern.observer.SummerObserver - change from null to cloudy in org.learning.design.pattern.observer.SummerObserver
+INFO main org.learning.design.pattern.observer.WinnerObserver - change from null to cloudy in org.learning.design.pattern.observer.WinnerObserver
+INFO main org.learning.design.pattern.observer.SummerObserver - change from cloudy to rainy in org.learning.design.pattern.observer.SummerObserver
+INFO main org.learning.design.pattern.observer.WinnerObserver - change from cloudy to rainy in org.learning.design.pattern.observer.WinnerObserver
