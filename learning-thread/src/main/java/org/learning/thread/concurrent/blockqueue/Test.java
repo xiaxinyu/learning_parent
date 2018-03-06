@@ -5,9 +5,9 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class IceCreamShop {
+public class Test {
 	public static void main(String[] args) {
-		BlockingQueue<IceCream> queue = new ArrayBlockingQueue<IceCream>(10);
+		BlockingQueue<Product> queue = new ArrayBlockingQueue<Product>(10);
 
 		ExecutorService producers = Executors.newFixedThreadPool(3);
 		for (int i = 0; i < 3; i++) {
