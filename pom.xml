@@ -17,6 +17,7 @@
 		<module>learning-springboot</module>
     <module>learning-zookeeper</module>
     <module>learning-dubbo</module>
+    <module>lerning-redis</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
@@ -31,12 +32,12 @@
 				<version>${junit.version}</version>
 				<scope>test</scope>
 			</dependency>
+			
+			 <dependency>  
+				 <groupId>log4j</groupId>  
+				 <artifactId>log4j</artifactId>  
+				 <version>${log4j.version}</version> 			 
+			</dependency>		  
 		</dependencies>
-		
-		 <dependency>  
-	         <groupId>log4j</groupId>  
-	         <artifactId>log4j</artifactId>  
-	         <version>${log4j.version}</version>  
-	      </dependency>
 	</dependencyManagement>
 </project>
