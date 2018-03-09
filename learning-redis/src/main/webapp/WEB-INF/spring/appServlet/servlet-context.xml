@@ -8,10 +8,11 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-	
 	<!-- Enables the Spring MVC @Controller programming model -->
+	<context:annotation-config/>
 	<annotation-driven />
-
+	<context:component-scan base-package="org.learning.redis.controller" />
+	
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 
@@ -21,8 +22,24 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="org.learning.redis.controller" />
 	
+	<beans:bean id="redisHttpSessionConfiguration"
+	      class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration">
+	    <beans:property name="maxInactiveIntervalInSeconds" value="600"/>
+	</beans:bean>
 	
+	<beans:bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+	    <beans:property name="maxTotal" value="100" />
+	    <beans:property name="maxIdle" value="10" />
+	</beans:bean>
+	
+	<beans:bean id="jedisConnectionFactory"
+	      class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" destroy-method="destroy">
+	    <beans:property name="hostName" value="192.168.179.131"/>
+	    <beans:property name="port" value="6379"/>
+	    <beans:property name="timeout" value="3000"/>
+	    <beans:property name="usePool" value="true"/>
+	    <beans:property name="poolConfig" ref="jedisPoolConfig"/>
+	</beans:bean>	
 	
 </beans:beans>

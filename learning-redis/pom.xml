@@ -14,12 +14,25 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<org.springframework-version>4.3.10.RELEASE</org.springframework-version>
-		<org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.springframework-version>5.0.4.RELEASE</org.springframework-version>
+		<org.aspectj-version>1.8.13</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-data-redis</artifactId>
+			<version>2.0.2.RELEASE</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-redis</artifactId>
+		    <version>2.0.2.RELEASE</version>
+		</dependency>
+		
+
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
@@ -99,12 +112,12 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-		
+
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>3.1.0</version>
+		    <artifactId>servlet-api</artifactId>
+		    <version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -118,8 +131,14 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		
+		<!-- Gson -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.2</version>
+		</dependency>
 	</dependencies>
-
 
 	<build>
 		<finalName>learning-redis</finalName>
