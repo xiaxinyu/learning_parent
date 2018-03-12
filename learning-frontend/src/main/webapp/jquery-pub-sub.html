@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Whole Screen</title>
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no,">
+<script src="./js/jquery-3.2.1.js"></script>
+<body>
+	<header> I am header </header>
+	<script>
+		$(function() {
+			$("body").on("custom.event.click", function(){
+				alert("custom.event.click");
+			});
+			
+			$("body").trigger("custom.event.click");
+		});
+	</script>
+</body>
+</html>
