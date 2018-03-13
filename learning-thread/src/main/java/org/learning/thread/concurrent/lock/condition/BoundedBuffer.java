@@ -10,18 +10,17 @@ public class BoundedBuffer {
 	private final Condition notEmpty = lock.newCondition();
 	private final int DEFAULT_CAPACITY = 100;
 	private int capacity = DEFAULT_CAPACITY;
+	private Object[] items = null;
+	private int putptr, takeptr, count;
 
 	public BoundedBuffer() {
-
+		items = new Object[capacity];
 	}
 
 	public BoundedBuffer(int capacity) {
 		this.capacity = capacity;
+		items = new Object[capacity];
 	}
-
-	private Object[] items = new Object[capacity];
-
-	private int putptr, takeptr, count;
 
 	public void put(Object value) throws InterruptedException {
 		lock.lock();
@@ -32,7 +31,7 @@ public class BoundedBuffer {
 			}
 			items[putptr] = value;
 			if (++putptr == capacity)
-				putptr = 0;
+				putptr = 0; 
 			++count;
 			notEmpty.signal();
 		} finally {
