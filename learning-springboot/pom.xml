@@ -8,9 +8,8 @@
 		<artifactId>learning-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>learning-parent</groupId>
 	<artifactId>learning-springboot</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>learning-springboot</name>
 	<url>http://maven.apache.org</url>
 	
@@ -61,7 +60,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.learning.boot.core.Application</mainClass>
+					<mainClass>com.learning.boot.startup.Application</mainClass>
 				</configuration>
 				<executions>
 					<execution>
