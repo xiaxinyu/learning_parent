@@ -19,6 +19,7 @@
 		<module>learning-zookeeper</module>
 		<module>learning-dubbo</module>
 		<module>learning-redis</module>
+		<module>learning-kafka</module>
 	</modules>
 	<properties>
 		<junit.version>4.12</junit.version>
