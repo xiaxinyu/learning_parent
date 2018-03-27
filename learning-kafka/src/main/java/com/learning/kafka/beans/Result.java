@@ -1,4 +1,4 @@
-package com.learning.kafka.entity;
+package com.learning.kafka.beans;
 
 public class Result {
 	private ResultStatus status;

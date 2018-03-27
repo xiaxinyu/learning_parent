@@ -1,11 +1,13 @@
-package com.learning.kafka.entity;
+package com.learning.kafka.beans;
 
-public class Message {
+import java.io.Serializable;
+
+public class Message implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private String name;
 	private String content;
 
 	public Message(String name, String content) {
-		super();
 		this.name = name;
 		this.content = content;
 	}
@@ -30,5 +32,4 @@ public class Message {
 	public String toString() {
 		return "Message [name=" + name + ", content=" + content + "]";
 	}
-
 }

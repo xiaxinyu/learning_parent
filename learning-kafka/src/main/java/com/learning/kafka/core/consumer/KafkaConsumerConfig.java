@@ -1,10 +1,9 @@
-package com.learning.kafka.consumer;
+package com.learning.kafka.core.consumer;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +13,8 @@ import org.springframework.kafka.config.KafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
+
+import com.learning.kafka.core.serizlizer.MessageDeserializer;
 
 @Configuration
 @EnableKafka
@@ -41,8 +42,8 @@ public class KafkaConsumerConfig {
 		propsMap.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, parameters.getEnableAutoCommit());
 		propsMap.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, parameters.getAutoCommitInterval());
 		propsMap.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, parameters.getSessionTimeout());
-		propsMap.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-		propsMap.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+		propsMap.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, MessageDeserializer.class);
+		propsMap.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, MessageDeserializer.class);
 		propsMap.put(ConsumerConfig.GROUP_ID_CONFIG, parameters.getGroupId());
 		propsMap.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, parameters.getAutoOffsetReset());
 		return propsMap;

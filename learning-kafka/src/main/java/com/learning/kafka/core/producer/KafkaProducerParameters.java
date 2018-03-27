@@ -1,4 +1,4 @@
-package com.learning.kafka.producer;
+package com.learning.kafka.core.producer;
 
 import org.springframework.stereotype.Component;
 

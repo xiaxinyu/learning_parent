@@ -1,4 +1,4 @@
-package com.learning.kafka.consumer;
+package com.learning.kafka.core.consumer;
 
 import org.springframework.stereotype.Component;
 
