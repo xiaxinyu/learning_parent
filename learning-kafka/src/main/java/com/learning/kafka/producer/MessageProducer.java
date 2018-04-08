@@ -10,7 +10,7 @@ import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
 import com.learning.kafka.beans.Message;
-import com.learning.kafka.core.producer.KafkaProducerParameters;
+import com.learning.kafka.core.producer.ProducerParameters;
 
 @Component
 public class MessageProducer {
@@ -19,7 +19,7 @@ public class MessageProducer {
 	private KafkaTemplate<String, Message> kafkaTemplate;
 
 	@Autowired
-	private KafkaProducerParameters parameters;
+	private ProducerParameters parameters;
 
 	public void sendMessage(final Message message) {
 		logger.info("Start to message：Message Id = " + message.getName());
@@ -28,7 +28,7 @@ public class MessageProducer {
 			@Override
 			public void onSuccess(SendResult<String, Message> result) {
 				ProducerRecord<String, Message> record = result.getProducerRecord();
-				logger.info("Successfully send.Message Id = " + message.getName() + ",Topic=" + record.topic()
+				logger.info("Successfully send.Message Id = " + message.toString() + ",Topic=" + record.topic()
 						+ ",Partition=" + record.partition());
 			}
 

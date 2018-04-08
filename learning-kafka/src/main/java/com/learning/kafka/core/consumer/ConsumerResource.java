@@ -5,35 +5,25 @@ import java.util.Map;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.kafka.annotation.EnableKafka;
-import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
-import org.springframework.kafka.config.KafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
-import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
+import org.springframework.stereotype.Component;
 
+import com.learning.kafka.beans.Message;
 import com.learning.kafka.core.serizlizer.MessageDeserializer;
 
-@Configuration
-@EnableKafka
-public class KafkaConsumerConfig {
+@Component
+public class ConsumerResource {
 
 	@Autowired
-	private KafkaConsumerParameters parameters;
-
-	@Bean
-	public KafkaListenerContainerFactory<ConcurrentMessageListenerContainer<String, String>> kafkaListenerContainerFactory() {
-		ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<String, String>();
-		factory.setConsumerFactory(consumerFactory());
-		factory.setConcurrency(parameters.getConcurrency());
-		factory.getContainerProperties().setPollTimeout(1500);
-		return factory;
-	}
+	private ConsumerParameters parameters;
 
 	public ConsumerFactory<String, String> consumerFactory() {
 		return new DefaultKafkaConsumerFactory<String, String>(consumerConfigs());
+	}
+	
+	public ConsumerFactory<String, Message> consumerReplyFactory() {
+		return new DefaultKafkaConsumerFactory<String, Message>(consumerConfigs());
 	}
 
 	public Map<String, Object> consumerConfigs() {

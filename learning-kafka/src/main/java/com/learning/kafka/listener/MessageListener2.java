@@ -12,7 +12,7 @@ public class MessageListener2 {
 
 	@KafkaListener(topics = { "test" }, groupId = "group1")
 	public Message consumer(Message message) {
-		logger.info("Listener2 consume message:" + message.getName());
+		logger.info("Listener2 consume message:" + message.toString());
 		return message;
 	}
 }

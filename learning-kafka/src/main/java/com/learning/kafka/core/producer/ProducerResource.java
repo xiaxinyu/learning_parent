@@ -5,26 +5,17 @@ import java.util.Map;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
+import org.springframework.stereotype.Component;
 
 import com.learning.kafka.beans.Message;
 import com.learning.kafka.core.serizlizer.MessageSerializer;
 
-@Configuration
-@EnableKafka
-public class KafkaProducerConfig<T> {
+@Component
+public class ProducerResource {
 	@Autowired
-	private KafkaProducerParameters parameters;
-
-	@Bean
-	public KafkaTemplate<String, Message> kafkaTemplate() {
-		return new KafkaTemplate<String, Message>(producerFactory());
-	}
+	private ProducerParameters parameters;
 
 	public ProducerFactory<String, Message> producerFactory() {
 		return new DefaultKafkaProducerFactory<String, Message>(producerConfigs());

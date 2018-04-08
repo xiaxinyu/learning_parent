@@ -3,7 +3,7 @@ package com.learning.kafka.core.consumer;
 import org.springframework.stereotype.Component;
 
 @Component
-public class KafkaConsumerParameters {
+public class ConsumerParameters {
 	public String cServers = "192.168.179.131:9092";
 	public boolean enableAutoCommit = true;
 	public String sessionTimeout = "6000";

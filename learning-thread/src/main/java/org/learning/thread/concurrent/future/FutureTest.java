@@ -13,7 +13,7 @@ public class FutureTest {
 		ExecutorService pool = Executors.newSingleThreadExecutor();
 		Future<String> future = pool.submit(new Callable<String>() {
 			public String call() throws Exception {
-				Thread.sleep(2000);
+				Thread.sleep(800);
 				return Thread.currentThread().getName();
 			}
 		});

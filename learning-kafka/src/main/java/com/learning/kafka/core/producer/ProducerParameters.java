@@ -3,7 +3,7 @@ package com.learning.kafka.core.producer;
 import org.springframework.stereotype.Component;
 
 @Component
-public class KafkaProducerParameters {
+public class ProducerParameters {
 	public String pServers = "192.168.179.131:9092";
 	public int retries=1;
 	public int batchSize=4096;
