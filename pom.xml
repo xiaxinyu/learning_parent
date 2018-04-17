@@ -19,6 +19,8 @@
 		<module>learning-dubbo</module>
 		<module>learning-redis</module>
     <module>learning-kafka</module>
+    <module>learning-netty</module>
+    <module>learning-rabbitmq</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
