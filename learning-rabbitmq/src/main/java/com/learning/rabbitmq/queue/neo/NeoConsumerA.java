@@ -1,14 +1,14 @@
-package com.learning.rabbitmq.queue.hello.world;
+package com.learning.rabbitmq.queue.neo;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@RabbitListener(queues = "hello")
-public class HelloConsumer {
+@RabbitListener(queues = "neo")
+public class NeoConsumerA {
 	@RabbitHandler
     public void process(String hello) {
-        System.out.println("Receiver  : " + hello);
+        System.out.println("Receiver A: " + hello);
     }
 }

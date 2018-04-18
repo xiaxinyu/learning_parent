@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.learning.rabbitmq.beans.Response;
-import com.learning.rabbitmq.queue.hello.world.HelloProducer;
+import com.learning.rabbitmq.queue.hello.HelloProducer;
 
 @Controller
 public class MessageController {
