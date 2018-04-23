@@ -21,6 +21,7 @@
     <module>learning-kafka</module>
     <module>learning-netty</module>
     <module>learning-rabbitmq</module>
+    <module>learning-swagger</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
