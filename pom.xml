@@ -22,6 +22,7 @@
     <module>learning-netty</module>
     <module>learning-rabbitmq</module>
     <module>learning-swagger</module>
+    <module>learning-restclient</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
