@@ -24,6 +24,7 @@
     <module>learning-swagger</module>
     <module>learning-restclient</module>
     <module>learning-spring-reactive</module>
+    <module>learning-nio</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
