@@ -1,12 +1,12 @@
 package org.learning.thread.tradition.wait.notify;
 
 public class WaitNotifyTest {
-	private static Output out = new Output();
-
 	public static void main(String[] args) {
+		final Output out = new Output();
+
 		new Thread(new Runnable() {
 			public void run() {
-				for (int i = 0; i < 50; i++) {
+				for (int i = 0; i < 10; i++) {
 					out.printInSubThread();
 				}
 			}
@@ -14,7 +14,7 @@ public class WaitNotifyTest {
 
 		new Thread(new Runnable() {
 			public void run() {
-				for (int i = 0; i < 50; i++) {
+				for (int i = 0; i < 10; i++) {
 					out.printInMainThread();
 				}
 			}
@@ -32,7 +32,7 @@ class Output {
 			} catch (InterruptedException e) {
 			}
 		}
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 10; i++) {
 			try {
 				Thread.sleep(20);
 			} catch (InterruptedException e) {
@@ -50,7 +50,7 @@ class Output {
 			} catch (InterruptedException e) {
 			}
 		}
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 10; i++) {
 			try {
 				Thread.sleep(20);
 			} catch (InterruptedException e) {
