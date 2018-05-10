@@ -1,10 +1,10 @@
-package org.learning.thread.tradition.share.data;
+package org.learning.thread.concurrent.threadlocal;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class ShareDataTest {
+public class MapThreadLocalTest {
 	private static final Map<Thread, Integer> map = new HashMap<Thread, Integer>();
 
 	public static void main(String[] args) {

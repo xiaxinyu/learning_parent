@@ -1,8 +1,8 @@
-package org.learning.thread.concurrent.local;
+package org.learning.thread.concurrent.threadlocal;
 
 import java.util.Random;
 
-public class ThreadLocalTest {
+public class PlainThreadLocalTest {
 	private static ThreadLocal<String> map = new ThreadLocal<String>();
 	public static void main(String[] args) {
 		for (int i = 0; i < 2; i++) {
