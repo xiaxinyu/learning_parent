@@ -1,7 +1,7 @@
 package org.learning.thread.tradition.wait.notify;
 
 public class WaitNotifyTest {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		Output op = new Output();
 		new Thread(new Runnable() {
 			public void run() {
@@ -9,6 +9,8 @@ public class WaitNotifyTest {
 			}
 		}).start();
 
+		Thread.sleep(3000);
+		
 		new Thread(new Runnable() {
 			public void run() {
 				op.printInMainThread();
