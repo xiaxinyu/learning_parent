@@ -3,11 +3,22 @@ package org.learning.thread.tradition.wait.notify;
 public class WaitNotifyTest {
 	public static void main(String[] args) throws InterruptedException {
 		Output op = new Output();
-		new Thread(new Runnable() {
+		Thread s1 = new Thread(new Runnable() {
 			public void run() {
-				op.printInSubThread();
+				op.printInSubThread1();
 			}
-		}).start();
+		});
+		s1.setPriority(9);
+		s1.start();
+		
+		Thread s2 = new Thread(new Runnable() {
+			public void run() {
+				op.printInSubThread2();
+			}
+		});
+		s2.setPriority(5);
+		s2.start();
+
 
 		Thread.sleep(3000);
 		
@@ -28,10 +39,10 @@ class Output {
 			}
 			System.out.println("MainThread output " + i);
 		}
-		this.notify();
+		this.notifyAll();
 	}
 
-	public synchronized void printInSubThread() {
+	public synchronized void printInSubThread1() {
 		if (true) {
 			try {
 				this.wait();
@@ -43,8 +54,23 @@ class Output {
 				Thread.sleep(20);
 			} catch (InterruptedException e) {
 			}
-			System.out.println("SubThread output " + i);
+			System.out.println("SubThread output1 " + i);
 		}
-		this.notify();
+	}
+	
+	public synchronized void printInSubThread2() {
+		if (true) {
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+			}
+		}
+		for (int i = 0; i < 10; i++) {
+			try {
+				Thread.sleep(20);
+			} catch (InterruptedException e) {
+			}
+			System.out.println("SubThread output2 " + i);
+		}
 	}
 }
