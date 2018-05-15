@@ -7,9 +7,9 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server {
+public class SocketServer {
 	public static void main(String[] args) {
-		new Server().createServer();
+		new SocketServer().createServer();
 	}
 
 	public void createServer() {
