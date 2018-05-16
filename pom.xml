@@ -26,6 +26,7 @@
     <module>learning-spring-reactive</module>
     <module>learning-nio</module>
     <module>learning-jvm</module>
+    <module>learning-spring-aop</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
