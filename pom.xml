@@ -28,6 +28,7 @@
     <module>learning-jvm</module>
     <module>learning-spring-aop</module>
     <module>learning-spring-ioc</module>
+    <module>learning-javaee</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
