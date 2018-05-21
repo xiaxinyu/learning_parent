@@ -15,3 +15,5 @@ classes
 ##############################
 pom.properties
 .settings
+.classpath
+.project

@@ -29,6 +29,7 @@
     <module>learning-spring-aop</module>
     <module>learning-spring-ioc</module>
     <module>learning-javaee</module>
+    <module>learning-classloader</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
