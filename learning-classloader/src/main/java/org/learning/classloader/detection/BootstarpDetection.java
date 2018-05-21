@@ -1,4 +1,4 @@
-package org.learning.classloader;
+package org.learning.classloader.detection;
 
 import java.net.URL;
 

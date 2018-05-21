@@ -1,4 +1,4 @@
-package org.learning.classloader;
+package org.learning.classloader.detection;
 
 public class ExtentionDetection {
 	public static void main(String[] args) {
