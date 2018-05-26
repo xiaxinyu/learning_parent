@@ -1,4 +1,4 @@
-package org.learning.spring.ioc.event;
+package org.learning.spring.ioc.event.listener;
 
 import org.springframework.context.ApplicationEvent;
 

@@ -1,6 +1,5 @@
-package org.learning.spring.ioc.publisher;
+package org.learning.spring.ioc.event.listener;
 
-import org.learning.spring.ioc.event.AppEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;

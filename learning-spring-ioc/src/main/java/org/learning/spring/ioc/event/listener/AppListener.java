@@ -1,6 +1,5 @@
-package org.learning.spring.ioc.listener;
+package org.learning.spring.ioc.event.listener;
 
-import org.learning.spring.ioc.event.AppEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
