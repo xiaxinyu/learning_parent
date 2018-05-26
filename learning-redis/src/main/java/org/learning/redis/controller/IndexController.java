@@ -2,6 +2,7 @@ package org.learning.redis.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.learning.redis.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.learning.redis.entity.User;
 
 @Controller
 public class IndexController {

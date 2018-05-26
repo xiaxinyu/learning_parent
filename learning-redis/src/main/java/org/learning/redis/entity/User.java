@@ -1,4 +1,4 @@
-package com.learning.redis.entity;
+package org.learning.redis.entity;
 
 public class User {
 	private String userName;
