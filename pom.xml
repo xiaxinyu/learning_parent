@@ -30,6 +30,7 @@
     <module>learning-spring-ioc</module>
     <module>learning-javaee</module>
     <module>learning-classloader</module>
+    <module>learning-annotation</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
