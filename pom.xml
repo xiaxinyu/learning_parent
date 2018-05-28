@@ -31,6 +31,7 @@
     <module>learning-javaee</module>
     <module>learning-classloader</module>
     <module>learning-annotation</module>
+    <module>learning-lock</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
