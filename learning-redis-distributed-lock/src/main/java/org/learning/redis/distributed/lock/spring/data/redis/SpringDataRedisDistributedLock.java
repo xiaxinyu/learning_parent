@@ -1,8 +1,8 @@
-package org.learning.redis.distributed.lock.springd.data.redis;
+package org.learning.redis.distributed.lock.spring.data.redis;
 
 import org.springframework.data.redis.core.RedisTemplate;
 
-public class RedisLock {
+public class SpringDataRedisDistributedLock {
 	private RedisTemplate redisTemplate;
 	/**
 	 * 重试时间
@@ -36,7 +36,7 @@ public class RedisLock {
 	 * @param lockKey
 	 *            锁的key
 	 */
-	public RedisLock(RedisTemplate redisTemplate, String lockKey) {
+	public SpringDataRedisDistributedLock(RedisTemplate redisTemplate, String lockKey) {
 		this.redisTemplate = redisTemplate;
 		this.lockKey = lockKey + LOCK_SUFFIX;
 	}
@@ -50,7 +50,7 @@ public class RedisLock {
 	 * @param timeoutMsecs
 	 *            获取锁的超时时间
 	 */
-	public RedisLock(RedisTemplate redisTemplate, String lockKey, int timeoutMsecs) {
+	public SpringDataRedisDistributedLock(RedisTemplate redisTemplate, String lockKey, int timeoutMsecs) {
 		this(redisTemplate, lockKey);
 		this.timeoutMsecs = timeoutMsecs;
 	}
@@ -66,7 +66,7 @@ public class RedisLock {
 	 * @param expireMsecs
 	 *            锁的有效期
 	 */
-	public RedisLock(RedisTemplate redisTemplate, String lockKey, int timeoutMsecs, int expireMsecs) {
+	public SpringDataRedisDistributedLock(RedisTemplate redisTemplate, String lockKey, int timeoutMsecs, int expireMsecs) {
 		this(redisTemplate, lockKey, timeoutMsecs);
 		this.expireMsecs = expireMsecs;
 	}

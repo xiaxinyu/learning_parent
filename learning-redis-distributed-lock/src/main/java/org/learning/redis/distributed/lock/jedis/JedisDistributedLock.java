@@ -1,4 +1,4 @@
-package org.learning.redis.distributed.lock.jredis;
+package org.learning.redis.distributed.lock.jedis;
 
 import java.util.List;
 import java.util.UUID;
@@ -7,17 +7,11 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.Transaction;
 import redis.clients.jedis.exceptions.JedisException;
-/**
- * SETNX 是『SET if Not eXists』(如果不存在，则 SET)的简写
- * 设置成功，返回 1 。
- * 设置失败，返回 0 。
- * @author summer
- *
- */
-public class DistributedLock {
+
+public class JedisDistributedLock {
 	private final JedisPool jedisPool;
 
-	public DistributedLock(JedisPool jedisPool) {
+	public JedisDistributedLock(JedisPool jedisPool) {
 		this.jedisPool = jedisPool;
 	}
 
@@ -25,21 +19,18 @@ public class DistributedLock {
 		Jedis conn = null;
 		String retIdentifier = null;
 		try {
-			// 获取连接
 			conn = jedisPool.getResource();
-			// 随机生成一个value
 			String identifier = UUID.randomUUID().toString();
-			// 锁名，即key值
 			String lockKey = "lock:" + locaName;
-			// 超时时间，上锁后超过此时间则自动释放锁
 			int lockExpire = (int) (timeout / 1000);
 
-			// 获取锁的超时时间，超过这个时间则放弃获取锁
 			long end = System.currentTimeMillis() + acquireTimeout;
 			while (System.currentTimeMillis() < end) {
+				// SETNX 是『SET if Not eXists』(如果不存在，则 SET)的简写
+				// 设置成功，返回 1 。
+				// 设置失败，返回 0 。
 				if (conn.setnx(lockKey, identifier) == 1) {
 					conn.expire(lockKey, lockExpire);
-					// 返回value值，用于释放锁时间确认
 					retIdentifier = identifier;
 					return retIdentifier;
 				}

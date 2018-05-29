@@ -1,0 +1,14 @@
+package com.learning.redis.distributed.lock.base;
+
+import redis.clients.jedis.Jedis;
+
+public class RedisPing {
+	public static void main(String[] args) {
+		// 连接本地的 Redis 服务
+		Jedis jedis = new Jedis("192.168.179.131", 6379, 3000);
+		jedis.auth("redis");
+		System.out.println("连接成功");
+		// 查看服务是否运行
+		System.out.println("服务正在运行: " + jedis.ping());
+	}
+}
