@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>learning-parent</groupId>
 	<artifactId>learning-parent</artifactId>
@@ -18,22 +19,23 @@
 		<module>learning-zookeeper</module>
 		<module>learning-dubbo</module>
 		<module>learning-redis</module>
-    <module>learning-kafka</module>
-    <module>learning-netty</module>
-    <module>learning-rabbitmq</module>
-    <module>learning-swagger</module>
-    <module>learning-restclient</module>
-    <module>learning-spring-reactive</module>
-    <module>learning-nio</module>
-    <module>learning-jvm</module>
-    <module>learning-spring-aop</module>
-    <module>learning-spring-ioc</module>
-    <module>learning-javaee</module>
-    <module>learning-classloader</module>
-    <module>learning-annotation</module>
-    <module>learning-lock</module>
-    <module>learning-redis-distributed-lock</module>
-  </modules>
+		<module>learning-kafka</module>
+		<module>learning-netty</module>
+		<module>learning-rabbitmq</module>
+		<module>learning-swagger</module>
+		<module>learning-restclient</module>
+		<module>learning-spring-reactive</module>
+		<module>learning-nio</module>
+		<module>learning-jvm</module>
+		<module>learning-spring-aop</module>
+		<module>learning-spring-ioc</module>
+		<module>learning-javaee</module>
+		<module>learning-classloader</module>
+		<module>learning-annotation</module>
+		<module>learning-lock</module>
+		<module>learning-redis-distributed-lock</module>
+		<module>learning-spring-cloud-eureka</module>
+	</modules>
 	<properties>
 		<junit.version>4.12</junit.version>
 		<log4j.version>1.2.17</log4j.version>
