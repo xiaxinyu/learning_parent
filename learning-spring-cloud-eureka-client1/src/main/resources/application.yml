@@ -3,7 +3,7 @@ eureka:
     serviceUrl:
       defaultZone: http://192.168.179.133:8761/eureka/
 server:
-  port: 8762
+  port: 8763
 spring:
   application:
-    name: eureka-client1
+    name: sayHello #SayHello代表公布服务

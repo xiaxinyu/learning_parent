@@ -10,6 +10,6 @@ public class HelloServiceRegister {
 	private RestTemplate restTemplate;
 
 	public String hiService(String name) {
-		return restTemplate.getForObject("http://EUREKA-CLIENT1/sayHello?name=" + name, String.class);
+		return restTemplate.getForObject("http://sayHello/sayHello?name=" + name, String.class);
 	}
 }

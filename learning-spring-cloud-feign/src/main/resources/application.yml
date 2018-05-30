@@ -3,7 +3,7 @@ eureka:
     serviceUrl:
       defaultZone: http://192.168.179.133:8761/eureka/
 server:
-  port: 8764
+  port: 8765
 spring:
   application:
-    name: SayHello-Ribbon
+    name: SayHello-Feign
