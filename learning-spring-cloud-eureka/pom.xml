@@ -11,6 +11,7 @@
 	<artifactId>learning-spring-cloud-eureka</artifactId>
 	<name>learning-spring-cloud-eureka</name>
 	<url>http://maven.apache.org</url>
+	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,7 +23,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				 <version>Camden.SR7</version>
+				<version>Camden.SR7</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -50,4 +51,24 @@
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
