@@ -38,6 +38,7 @@
     <module>learning-spring-cloud-eureka-client1</module>
     <module>learning-spring-cloud-ribbon</module>
     <module>learning-spring-cloud-feign</module>
+    <module>learning-java-volatile</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
