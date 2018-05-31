@@ -39,6 +39,7 @@
     <module>learning-spring-cloud-ribbon</module>
     <module>learning-spring-cloud-feign</module>
     <module>learning-java-volatile</module>
+    <module>learning-spring-cloud-hystrix</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>

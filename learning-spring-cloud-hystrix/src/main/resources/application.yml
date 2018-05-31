@@ -6,4 +6,4 @@ server:
   port: 8764
 spring:
   application:
-    name: SayHello-Ribbon
+    name: SayHello-Hystrix
