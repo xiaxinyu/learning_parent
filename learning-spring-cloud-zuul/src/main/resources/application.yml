@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.179.133:8761/eureka/
+server:
+  port: 8767
+spring:
+  application:
+    name: SayHello-Zuul
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: SayHello-Ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: SayHello-Feign
