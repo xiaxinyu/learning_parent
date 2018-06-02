@@ -1,4 +1,4 @@
-package org.learning.spring.cloud.config;
+package org.learning.spring.cloud.config.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
