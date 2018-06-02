@@ -47,6 +47,7 @@
     <module>learning-spring-cloud-zipkin-server</module>
     <module>learning-spring-cloud-sleuth-client1</module>
     <module>learning-spring-cloud-sleuth-miya</module>
+    <module>learning-spring-cloud-eureka-cluster</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
