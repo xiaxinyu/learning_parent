@@ -1,0 +1,11 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.179.133:8761/eureka/
+server:
+  port: 9413
+spring:
+  application:
+    name: Sleuth-Miya
+  zipkin:
+    base-url: http://192.168.179.133:9411
