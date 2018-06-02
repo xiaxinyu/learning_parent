@@ -3,13 +3,14 @@ server:
   
 spring:
   profiles: peer1
+  application:
+    name: Eureka-Server
 
 eureka:
   instance:
-    hostname: localhost
-    preferIpAddress: true
+    hostname: peer1
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://peer2:8662/eureka/ #指向对方端口
