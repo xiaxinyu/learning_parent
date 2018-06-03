@@ -7,8 +7,8 @@
     <artifactId>learning-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>learning-spring-cloud-hystrix</artifactId>
-  <name>learning-spring-cloud-hystrix</name>
+  <artifactId>learning-spring-cloud-turbine-hystrix-second</artifactId>
+  <name>learning-spring-cloud-turbine-hystrix-second</name>
   <url>http://maven.apache.org</url>
   <packaging>jar</packaging>
 
@@ -55,11 +55,6 @@
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 		
-		<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
-        </dependency>
-        
         <dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-hystrix</artifactId>
