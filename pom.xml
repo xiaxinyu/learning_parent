@@ -48,6 +48,7 @@
     <module>learning-spring-cloud-sleuth-client1</module>
     <module>learning-spring-cloud-sleuth-miya</module>
     <module>learning-spring-cloud-eureka-cluster</module>
+    <module>learning-spring-cloud-hystrix-dashboard</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
