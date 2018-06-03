@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    consul:
+      host: 192.168.179.130
+      port: 8500
+      discovery:
+        healthCheckPath: ${management.contextPath}:8402/health
+        healthCheckInterval: 15s
+        instance-id: Service-Consul
+  application:
+    name: Service-Consul
+server:
+  port: 8402
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.179.133:8761/eureka/

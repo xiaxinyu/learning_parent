@@ -52,6 +52,7 @@
     <module>learning-spring-cloud-turbine</module>
     <module>learning-spring-cloud-turbine-hystrix-first</module>
 	<module>learning-spring-cloud-turbine-hystrix-second</module>
+    <module>learning-spring-cloud-consul</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
