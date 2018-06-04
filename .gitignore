@@ -17,3 +17,5 @@ pom.properties
 .settings
 .classpath
 .project
+learning-spring-cloud-zipkin-server/.springBeans
+learning-spring-cloud-sleuth-client1/.springBeans
