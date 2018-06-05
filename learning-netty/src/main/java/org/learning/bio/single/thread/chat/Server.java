@@ -3,6 +3,7 @@ package org.learning.bio.single.thread.chat;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -28,7 +29,6 @@ public class Server {
 
 class ServerListener extends Thread {
 	private Socket socket = null;
-	private boolean exit = false;
 
 	public ServerListener(Socket socket) {
 		this.socket = socket;
@@ -39,18 +39,14 @@ class ServerListener extends Thread {
 		BufferedReader bufferedReader = null;
 		try {
 			bufferedReader = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
-			while (!exit) {
-				String info = null;
-				while ((info = bufferedReader.readLine()) != null) {
-					System.out.println("I am server,client say: " + info);
-					if ("exit".equalsIgnoreCase(info)) {
-						exit = true;
-					}
+			String info = null;
+			while ((info = bufferedReader.readLine()) != null && (socket != null && !socket.isClosed())) {
+				System.out.println("I am server,client say: " + info);
+				if ("exit".equalsIgnoreCase(info)) {
+					break;
 				}
 			}
-			if (this.socket != null && this.socket.isConnected()) {
-				socket.shutdownInput();
-			}
+			System.out.println("ServerListener exit!");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -77,21 +73,34 @@ class ServerSender extends Thread {
 
 	@Override
 	public void run() {
+		Scanner scanner = null;
+		OutputStream outputStream = null;
 		try {
-			PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
-			Scanner scanner = new Scanner(System.in);
-			while (scanner.hasNext()) {
-				String msg = scanner.next();
-				printWriter.write(msg);
-				printWriter.flush();
-				if ("exit".equalsIgnoreCase(msg)) {
+			scanner = new Scanner(System.in);
+			outputStream = socket.getOutputStream();
+			String line = "";
+			while ((line = scanner.nextLine()) != null && (this.socket != null && !this.socket.isClosed())) {
+				String message = line + "\n";
+				outputStream.write(message.getBytes());
+				outputStream.flush();
+				if ("exit".equalsIgnoreCase(line)) {
 					break;
 				}
 			}
-			scanner.close();
-			socket.shutdownOutput();
+			System.out.println("ServerSender exit!");
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				if (scanner != null) {
+					scanner.close();
+				}
+				if (this.socket != null && !this.socket.isClosed()) {
+					outputStream.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
