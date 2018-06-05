@@ -14,6 +14,7 @@ public class Server {
 			server = new ServerSocket(9000);
 			while (true) {
 				try {
+					//server.accept() blocking method
 					new SocketHandler(server.accept()).start();
 				} catch (Exception e) {
 					e.printStackTrace();

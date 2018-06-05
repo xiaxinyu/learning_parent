@@ -15,7 +15,7 @@ public class Server {
 		PrintWriter printWriter = null;
 		try {
 			server = new ServerSocket(9000);
-
+			//server.accept() blocking method
 			socket = server.accept();
 			bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			String info = null;
