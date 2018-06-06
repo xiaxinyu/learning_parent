@@ -7,50 +7,99 @@ import java.nio.channels.SocketChannel;
 import java.util.Scanner;
 
 public class Client {
-	public static void main(String[] args) throws Exception {
-		SocketChannel socketChannel = null;
-		Scanner scanner = null;
+	public void init() {
 		try {
-			socketChannel = SocketChannel.open();
+			SocketChannel socketChannel = SocketChannel.open();
 			socketChannel.configureBlocking(false);
 			socketChannel.connect(new InetSocketAddress("127.0.0.1", 9090));
-
 			if (socketChannel.finishConnect()) {
-				ByteBuffer buffer = ByteBuffer.allocate(1024);
-				scanner = new Scanner(System.in);
-				String line = "";
-				while ((line = scanner.nextLine()) != null) {
-					sendMessage(socketChannel, buffer, line);
-					if("exit".equalsIgnoreCase(line)) {
-						break;
-					}
-				}
+				new ClientListener(socketChannel).start();
+				new ClientSender(socketChannel).start();
 			}
-		} catch (IOException | InterruptedException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				if (scanner != null) {
-					scanner.close();
-				}
-				if (socketChannel != null) {
-					socketChannel.close();
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			
-			System.out.println("Client stop!!");
 		}
 	}
 
-	private static void sendMessage(SocketChannel socketChannel, ByteBuffer buffer, String message)
-			throws InterruptedException, IOException {
+	public static void main(String[] args) throws Exception {
+		new Client().init();
+	}
+}
+
+class ClientListener extends Thread {
+	private SocketChannel socketChannel;
+
+	public ClientListener(SocketChannel socketChannel) {
+		this.socketChannel = socketChannel;
+	}
+
+	@Override
+	public void run() {
+		try {
+			ByteBuffer buf = ByteBuffer.allocate(1024);
+			while (socketChannel.read(buf) != -1) {
+				buf.flip();
+				String message = "";
+				while (buf.hasRemaining()) {
+					message += (char) buf.get();
+				}
+				if (!"".equals(message)) {
+					System.out.println(message);
+					buf.clear();
+					if ("exit".equals(message)) {
+						break;
+					}
+				}
+				Thread.sleep(1000);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (this.socketChannel != null) {
+				try {
+					this.socketChannel.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+}
+
+class ClientSender extends Thread {
+	private SocketChannel socketChannel;
+
+	public ClientSender(SocketChannel socketChannel) {
+		this.socketChannel = socketChannel;
+	}
+
+	@Override
+	public void run() {
+		ByteBuffer buffer = ByteBuffer.allocate(1024);
+		Scanner scanner = new Scanner(System.in);
+		try {
+			String line = "";
+			while ((line = scanner.nextLine()) != null) {
+				sendMessage(socketChannel, buffer, line);
+				if ("exit".equalsIgnoreCase(line)) {
+					break;
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (scanner != null) {
+				scanner.close();
+			}
+		}
+	}
+
+	private void sendMessage(SocketChannel socketChannel, ByteBuffer buffer, String message) throws IOException {
 		buffer.clear();
 		buffer.put(message.getBytes());
 		buffer.flip();
 		while (buffer.hasRemaining()) {
-			socketChannel.write(buffer);
+			this.socketChannel.write(buffer);
 		}
 		buffer.compact();
 	}
