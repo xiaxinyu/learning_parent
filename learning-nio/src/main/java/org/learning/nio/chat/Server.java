@@ -1,4 +1,4 @@
-package org.learning.nio.selector;
+package org.learning.nio.chat;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
