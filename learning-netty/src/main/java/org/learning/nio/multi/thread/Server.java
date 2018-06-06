@@ -77,7 +77,8 @@ public class Server {
 				bytesRead = socketChannel.read(byteBuffer);
 			}
 			if (bytesRead == -1) {
-				socketChannel.close();
+				//socketChannel.close();
+				socketChannel.register(this.selector, SelectionKey.OP_WRITE);
 			}
 		} catch (IOException e) {
 			throw new Exception("doRead has error.", e);
@@ -88,11 +89,12 @@ public class Server {
 		try {
 			SocketChannel socketChannel = (SocketChannel) key.channel();
 			ByteBuffer byteBuffer = ByteBuffer.allocate(BUF_SIZE);
+			byteBuffer.clear();
+			byteBuffer.put("Welcome".getBytes());
 			byteBuffer.flip();
-			while (byteBuffer.hasRemaining()) {
-				socketChannel.write(byteBuffer);
-			}
-			byteBuffer.compact();
+			
+			socketChannel.write(byteBuffer);
+			socketChannel.close();
 		} catch (IOException e) {
 			throw new Exception("doWrite has error.", e);
 		}
