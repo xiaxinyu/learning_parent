@@ -17,6 +17,8 @@ public class Server {
 		server.configureBlocking(false);
 		server.register(selector, SelectionKey.OP_ACCEPT);
 
+		new ServerSender(this.selector).start();
+
 		while (selector.select() > 0) {
 			for (SelectionKey sk : selector.selectedKeys()) {
 				selector.selectedKeys().remove(sk);
@@ -40,7 +42,8 @@ public class Server {
 
 	private void doRead(SelectionKey selectionKey) throws IOException {
 		SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
-		new Listener(socketChannel, Type.SERVER).start();;
+		new Listener(socketChannel, Type.SERVER).start();
+		;
 	}
 
 	public static void main(String[] args) throws IOException {
