@@ -53,6 +53,7 @@
     <module>learning-spring-cloud-turbine-hystrix-first</module>
 	<module>learning-spring-cloud-turbine-hystrix-second</module>
     <module>learning-spring-cloud-consul</module>
+    <module>learning-bio</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
