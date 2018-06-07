@@ -2,16 +2,15 @@ package org.learning.nio.selector;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.util.Scanner;
+import java.util.Vector;
 
 public class ServerSender extends Thread {
-	private Selector selector = null;
+	private Vector<SocketChannel> channels = null;
 
-	public ServerSender(Selector selector) {
-		this.selector = selector;
+	public ServerSender(Vector<SocketChannel> channels) {
+		this.channels = channels;
 	}
 
 	@Override
@@ -20,12 +19,8 @@ public class ServerSender extends Thread {
 		try {
 			String line = "";
 			while ((line = scanner.nextLine()) != null) {
-				for (SelectionKey sk : this.selector.selectedKeys()) {
-					this.selector.selectedKeys().remove(sk);
-					if (sk.isAcceptable()) {
-						SocketChannel socketChannel = (SocketChannel) sk.channel();
-						socketChannel.write(ByteBuffer.wrap(line.getBytes()));
-					}
+				for (SocketChannel channel : this.channels) {
+					channel.write(ByteBuffer.wrap(line.getBytes()));
 				}
 				if ("exit".equalsIgnoreCase(line)) {
 					break;

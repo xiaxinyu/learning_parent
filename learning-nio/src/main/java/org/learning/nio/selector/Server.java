@@ -6,9 +6,11 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.util.Vector;
 
 public class Server {
 	private Selector selector = null;
+	private Vector<SocketChannel> channels = new Vector<SocketChannel>();
 
 	public void init() throws IOException {
 		selector = Selector.open();
@@ -17,7 +19,7 @@ public class Server {
 		server.configureBlocking(false);
 		server.register(selector, SelectionKey.OP_ACCEPT);
 
-		new ServerSender(this.selector).start();
+		new ServerSender(channels).start();
 
 		while (selector.select() > 0) {
 			for (SelectionKey sk : selector.selectedKeys()) {
@@ -35,9 +37,10 @@ public class Server {
 	}
 
 	private void doAccept(ServerSocketChannel server) throws IOException {
-		SocketChannel sc = server.accept();
-		sc.configureBlocking(false);
-		sc.register(selector, SelectionKey.OP_READ);
+		SocketChannel socketChannel = server.accept();
+		socketChannel.configureBlocking(false);
+		socketChannel.register(selector, SelectionKey.OP_READ);
+		channels.add(socketChannel);
 	}
 
 	private void doRead(SelectionKey selectionKey) throws IOException {
