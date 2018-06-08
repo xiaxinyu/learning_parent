@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: RabbitMQ-Producer 
+  rabbitmq:
+    host: 192.168.179.128
+    port: 5672
+    username: root
+    password: root 
+    
+queue:
+  name:
+    helloworld: helloworld
+    workqueue: workqueue
+    pubsubqueuea: pubsubqueuea
+    pubsubqueueb: pubsubqueueb
+    pubsubqueuec: pubsubqueuec
+
+exchange:
+  name:
+    pubsub: pubsubexchange

@@ -1,8 +1,8 @@
 spring:
   application:
-    name: RabbitMQ-Consumer    
+    name: RabbitMQ-Consumer 
   rabbitmq:
-    host: 192.168.179.133
+    host: 192.168.179.128
     port: 5672
     username: root
     password: root

@@ -55,6 +55,8 @@
     <module>learning-spring-cloud-consul</module>
     <module>learning-bio</module>
     <module>learning-reactor</module>
+    <module>learning-rabbitmq-producer</module>
+    <module>learning-rabbitmq-consumer</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
