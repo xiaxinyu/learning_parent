@@ -14,7 +14,10 @@ queue:
     pubsubqueuea: pubsubqueuea
     pubsubqueueb: pubsubqueueb
     pubsubqueuec: pubsubqueuec
+    topicqueuea: topicqueuea
+    topicqueueb: topicqueueb
 
 exchange:
   name:
     pubsub: pubsubexchange
+    topic: topicexchange
