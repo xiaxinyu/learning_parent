@@ -24,7 +24,11 @@ public class UptimeServer {
 							ch.pipeline().addLast(new UptimeServerHandler());
 						}
 					});
+			// Bind and start to accept incoming connections.
 			ChannelFuture future = bootstrap.bind(port).sync();
+			// Wait until the server socket is closed.
+			// In this example, this does not happen, but you can do that to gracefully
+			// shut down your server.
 			future.channel().closeFuture().sync();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
