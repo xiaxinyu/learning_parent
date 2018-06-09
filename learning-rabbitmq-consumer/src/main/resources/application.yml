@@ -1,3 +1,6 @@
+server:
+  port: 8081
+  
 spring:
   application:
     name: RabbitMQ-Consumer 
@@ -6,3 +9,12 @@ spring:
     port: 5672
     username: root
     password: root
+    
+rpc-mode:
+  exchange:
+    name: rpc-direct-exchange
+  queue:
+    name:
+      rpc: rpc-queue
+  routing-key:
+      rpc: rpc

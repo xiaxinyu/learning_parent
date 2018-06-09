@@ -1,6 +1,9 @@
+server:
+  port: 8080 
+
 spring:
   application:
-    name: RabbitMQ-Producer 
+    name: RabbitMQ-Producer
   rabbitmq:
     host: 192.168.179.128
     port: 5672
@@ -47,5 +50,13 @@ routing-mode:
       orange: orange
       black: black
       green: green
-    
+      
+rpc-mode:
+  exchange:
+    name: rpc-direct-exchange
+  queue:
+    name:
+      rpc: rpc-queue
+  routing-key:
+      rpc: rpc
     
