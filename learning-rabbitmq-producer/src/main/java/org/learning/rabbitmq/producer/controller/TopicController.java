@@ -12,13 +12,13 @@ public class TopicController {
 	@Autowired
 	private TopicProducer producer;
 
-	@RequestMapping(value = "/topic/send/main", method = RequestMethod.GET)
+	@RequestMapping(value = "/topic/send/info", method = RequestMethod.GET)
 	public void sendMessageMain(@RequestParam String message) {
-		producer.sendMessageMain(message);
+		producer.sendMessageInfo(message);
 	}
 
-	@RequestMapping(value = "/topic/send/others", method = RequestMethod.GET)
+	@RequestMapping(value = "/topic/send/warn", method = RequestMethod.GET)
 	public void sendMessage2(@RequestParam String message) {
-		producer.sendMessageOthers(message);
+		producer.sendMessageWarn(message);
 	}
 }

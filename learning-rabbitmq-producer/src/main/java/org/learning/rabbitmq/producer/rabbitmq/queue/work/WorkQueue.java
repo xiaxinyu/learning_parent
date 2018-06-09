@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class WorkQueue {
 
-	@Value("${queue.name.workqueue}")
+	@Value("${work-mode.queue.name}")
 	private String queueName;
 
 	@Bean
-	public Queue workQueueMethod() {
+	public Queue workModeQueue() {
 		return new Queue(queueName);
 	}
 }

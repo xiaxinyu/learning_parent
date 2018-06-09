@@ -6,20 +6,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class TopicQueues {
-	@Value("${queue.name.topicqueuea}")
-	private String queueNameA;
+public class TopicModeQueues {
+	@Value("${topic-mode.queues.name.info}")
+	private String queueNameInfo;
 
-	@Value("${queue.name.topicqueueb}")
-	private String queueNameB;
+	@Value("${topic-mode.queues.name.warn}")
+	private String queueNameWarn;
 
 	@Bean
-	public Queue topicQueueA() {
-		return new Queue(queueNameA);
+	public Queue queueInfo() {
+		return new Queue(queueNameInfo);
 	}
 
 	@Bean
-	public Queue topicQueueB() {
-		return new Queue(queueNameB);
+	public Queue queueWarn() {
+		return new Queue(queueNameWarn);
 	}
 }

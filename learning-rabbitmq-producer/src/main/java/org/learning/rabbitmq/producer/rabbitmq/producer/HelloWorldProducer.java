@@ -13,7 +13,7 @@ public class HelloWorldProducer {
 	@Autowired
 	private RabbitTemplate template;
 
-	@Value("${queue.name.helloworld}")
+	@Value("${single-mode.queue.name}")
 	private String queueName;
 
 	public void sendMessage(String message) {

@@ -13,7 +13,7 @@ public class WorkQueueProducer {
 	@Autowired
 	private RabbitTemplate template;
 
-	@Value("${queue.name.workqueue}")
+	@Value("${work-mode.queue.name}")
 	private String queueName;
 
 	public void sendMessage(String message) {

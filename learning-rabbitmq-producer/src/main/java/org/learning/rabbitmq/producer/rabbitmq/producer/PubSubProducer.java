@@ -13,7 +13,7 @@ public class PubSubProducer {
 	@Autowired
 	private RabbitTemplate template;
 
-	@Value("${exchange.name.pubsub}")
+	@Value("${pubsub-mode.exchange.name}")
 	public String exchangeName;
 
 	public void sendMessage(String message) {

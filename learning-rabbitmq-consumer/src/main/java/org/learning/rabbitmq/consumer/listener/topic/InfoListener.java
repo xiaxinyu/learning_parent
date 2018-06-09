@@ -6,12 +6,12 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@RabbitListener(queues = "topicqueuea")
-public class TopicExchangeListenerA {
-	private Logger logger = Logger.getLogger(TopicExchangeListenerA.class);
+@RabbitListener(queues = "info-queue")
+public class InfoListener {
+	private Logger logger = Logger.getLogger(InfoListener.class);
 
 	@RabbitHandler
 	public void process(String message) {
-		logger.info("ReceiverA message: " + message + " from TopicExchange.");
+		logger.info("info-queue message: " + message + " from TopicExchange.");
 	}
 }

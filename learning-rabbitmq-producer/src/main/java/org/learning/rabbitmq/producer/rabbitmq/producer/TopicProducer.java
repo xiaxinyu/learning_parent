@@ -13,16 +13,22 @@ public class TopicProducer {
 	@Autowired
 	private RabbitTemplate template;
 
-	@Value("${exchange.name.topic}")
+	@Value("${topic-mode.exchange.name}")
 	public String exchangeName;
+	
+	@Value("${topic-mode.routing-key.info}")
+	private String routingKeyInfo;
 
-	public void sendMessageOthers(String message) {
+	@Value("${topic-mode.routing-key.warn}")
+	private String routingKeyWarn;
+
+	public void sendMessageInfo(String message) {
 		logger.info("Send others message: " + message + " to " + this.exchangeName);
-		template.convertAndSend(this.exchangeName, "topic.others", message);
+		template.convertAndSend(this.exchangeName, this.routingKeyInfo, message);
 	}
 
-	public void sendMessageMain(String message) {
+	public void sendMessageWarn(String message) {
 		logger.info("Send main message: " + message + " to " + this.exchangeName);
-		template.convertAndSend(this.exchangeName, "topic.main", message);
+		template.convertAndSend(this.exchangeName, this.routingKeyWarn, message);
 	}
 }

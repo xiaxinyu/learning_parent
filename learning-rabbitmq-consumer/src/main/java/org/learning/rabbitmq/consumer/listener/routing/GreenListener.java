@@ -1,4 +1,4 @@
-package org.learning.rabbitmq.consumer.listener.helloworld;
+package org.learning.rabbitmq.consumer.listener.routing;
 
 import org.apache.log4j.Logger;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
@@ -6,12 +6,12 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@RabbitListener(queues = "single-queue")
-public class HelloWorldListener {
-	private Logger logger = Logger.getLogger(HelloWorldListener.class);
-
+@RabbitListener(queues = "green-queue")
+public class GreenListener {
+	private Logger logger = Logger.getLogger(GreenListener.class);
+	
 	@RabbitHandler
 	public void process(String message) {
-		logger.info("Receiver message: " + message + " from helloworld.");
+		logger.info("green-queue message: " + message + " from DirectExchange.");
 	}
 }

@@ -5,19 +5,47 @@ spring:
     host: 192.168.179.128
     port: 5672
     username: root
-    password: root 
-    
-queue:
-  name:
-    helloworld: helloworld
-    workqueue: workqueue
-    pubsubqueuea: pubsubqueuea
-    pubsubqueueb: pubsubqueueb
-    pubsubqueuec: pubsubqueuec
-    topicqueuea: topicqueuea
-    topicqueueb: topicqueueb
+    password: root
+   
+single-mode:
+  queue:
+    name: single-queue
 
-exchange:
-  name:
-    pubsub: pubsubexchange
-    topic: topicexchange
+work-mode:
+  queue:
+    name: work-queue
+    
+pubsub-mode:
+  exchange:
+    name: fanout-exchange
+  queues:
+    name:
+      windy: windy-queue
+      snowy: snowy-queue
+      sunny: sunny-queue
+      
+topic-mode:
+  exchange:
+    name: topic-exchange
+  queues:
+    name:
+      info: info-queue
+      warn: warn-queue
+  routing-key:
+      info: info
+      warn: warn
+      
+routing-mode:
+  exchange:
+    name: direct-exchange
+  queues:
+    name:
+      orange: orange-queue
+      black: black-queue
+      green: green-queue
+  routing-key:
+      orange: orange
+      black: black
+      green: green
+    
+    

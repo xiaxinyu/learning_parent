@@ -7,11 +7,11 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class HelloWordQueue {
-	@Value("${queue.name.helloworld}")
+	@Value("${single-mode.queue.name}")
 	private String queueName;
 
 	@Bean
-	public Queue helloWordQueueMethod() {
+	public Queue singleModeQueue() {
 		return new Queue(queueName);
 	}
 }

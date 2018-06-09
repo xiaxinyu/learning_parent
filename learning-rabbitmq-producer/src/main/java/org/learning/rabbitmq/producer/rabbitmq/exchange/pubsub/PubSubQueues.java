@@ -8,27 +8,27 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PubSubQueues {
 
-	@Value("${queue.name.pubsubqueuea}")
-	private String queueNameA;
+	@Value("${pubsub-mode.queues.name.windy}")
+	private String queueNameWindy;
 
-	@Value("${queue.name.pubsubqueueb}")
-	private String queueNameB;
+	@Value("${pubsub-mode.queues.name.snowy}")
+	private String queueNameSnowy;
 
-	@Value("${queue.name.pubsubqueuec}")
-	private String queueNameC;
+	@Value("${pubsub-mode.queues.name.sunny}")
+	private String queueNameSunny;
 
 	@Bean
-	public Queue pubsubQueueA() {
-		return new Queue(queueNameA);
+	public Queue queueWindy() {
+		return new Queue(queueNameWindy);
 	}
 
 	@Bean
-	public Queue pubsubQueueB() {
-		return new Queue(queueNameB);
+	public Queue queueSnowy() {
+		return new Queue(queueNameSnowy);
 	}
 
 	@Bean
-	public Queue pubsubQueueC() {
-		return new Queue(queueNameC);
+	public Queue queueSunny() {
+		return new Queue(queueNameSunny);
 	}
 }

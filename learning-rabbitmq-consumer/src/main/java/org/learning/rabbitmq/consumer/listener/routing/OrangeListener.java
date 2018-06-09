@@ -1,4 +1,4 @@
-package org.learning.rabbitmq.consumer.listener.topic;
+package org.learning.rabbitmq.consumer.listener.routing;
 
 import org.apache.log4j.Logger;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
@@ -6,12 +6,12 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@RabbitListener(queues = "topicqueueb")
-public class TopicExchangeListenerC {
-	private Logger logger = Logger.getLogger(TopicExchangeListenerC.class);
-	
+@RabbitListener(queues = "orange-queue")
+public class OrangeListener {
+	private Logger logger = Logger.getLogger(OrangeListener.class);
+
 	@RabbitHandler
 	public void process(String message) {
-		logger.info("ReceiverC message: " + message + " from TopicExchange.");
+		logger.info("orange-queue message: " + message + " from DirectExchange.");
 	}
 }
