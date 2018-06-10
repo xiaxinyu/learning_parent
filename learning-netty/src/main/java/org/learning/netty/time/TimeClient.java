@@ -1,4 +1,4 @@
-package org.learning.netty.pojo;
+package org.learning.netty.time;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -9,17 +9,16 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
-public class PojoClient {
+public class TimeClient {
 	public void start(String host, int port) {
 		EventLoopGroup group = new NioEventLoopGroup();
 		try {
 			Bootstrap bootstrap = new Bootstrap();
 			bootstrap.group(group).channel(NioSocketChannel.class).option(ChannelOption.SO_KEEPALIVE, true)
 					.handler(new ChannelInitializer<SocketChannel>() {
-
 						@Override
 						protected void initChannel(SocketChannel ch) throws Exception {
-							ch.pipeline().addLast(new TimeDecoder(), new TimeClientHandler());
+							ch.pipeline().addLast(new TimeClientHandler());
 						}
 					});
 			ChannelFuture future = bootstrap.connect(host, port).sync();
@@ -32,6 +31,6 @@ public class PojoClient {
 	}
 
 	public static void main(String[] args) {
-		new PojoClient().start("127.0.0.1", 9999);
+		new TimeClient().start("127.0.0.1", 9999);
 	}
 }
