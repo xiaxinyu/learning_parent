@@ -59,4 +59,8 @@ rpc-mode:
       rpc: rpc-queue
   routing-key:
       rpc: rpc
+      
+pojo-mode:
+  queue:
+    name: pojo-queue
     
