@@ -3,17 +3,17 @@ package org.learning.netty.pojo;
 import java.util.Date;
 
 public class UnixTime {
-	private final int value;
+	private final long value;
 
 	public UnixTime() {
 		this((int) (System.currentTimeMillis() / 1000L + 2208988800L));
 	}
 
-	public UnixTime(int value) {
-		this.value = value;
+	public UnixTime(long l) {
+		this.value = l;
 	}
 
-	public int value() {
+	public long value() {
 		return value;
 	}
 

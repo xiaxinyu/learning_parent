@@ -4,14 +4,11 @@ import java.util.List;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.ByteToMessageDecoder;
+import io.netty.handler.codec.ReplayingDecoder;
 
-public class TimeDecoder extends ByteToMessageDecoder {
+public class TimeDecoderAdventurer extends ReplayingDecoder<Void> {
 	@Override
 	protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
-		if (in.readableBytes() < 4) {
-			return;
-		}
-		out.add(new UnixTime(in.readUnsignedInt()));
+		out.add(in.readBytes(4));
 	}
 }
