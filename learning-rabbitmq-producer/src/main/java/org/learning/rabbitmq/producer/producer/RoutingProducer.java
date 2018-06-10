@@ -1,4 +1,4 @@
-package org.learning.rabbitmq.producer.rabbitmq.producer;
+package org.learning.rabbitmq.producer.producer;
 
 import org.apache.log4j.Logger;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

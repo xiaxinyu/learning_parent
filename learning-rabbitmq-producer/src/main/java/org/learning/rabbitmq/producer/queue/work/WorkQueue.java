@@ -1,4 +1,4 @@
-package org.learning.rabbitmq.producer.rabbitmq.queue.work;
+package org.learning.rabbitmq.producer.queue.work;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.beans.factory.annotation.Value;

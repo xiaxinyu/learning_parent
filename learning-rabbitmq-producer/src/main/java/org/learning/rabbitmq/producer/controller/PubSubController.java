@@ -1,6 +1,6 @@
 package org.learning.rabbitmq.producer.controller;
 
-import org.learning.rabbitmq.producer.rabbitmq.producer.PubSubProducer;
+import org.learning.rabbitmq.producer.producer.PubSubProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

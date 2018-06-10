@@ -1,4 +1,4 @@
-package org.learning.rabbitmq.producer.rabbitmq.rpc.server;
+package org.learning.rabbitmq.producer.queue.helloworld;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.beans.factory.annotation.Value;
@@ -6,12 +6,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RPCQueue {
-	@Value("${rpc-mode.queue.name.rpc}")
+public class HelloWordQueue {
+	@Value("${single-mode.queue.name}")
 	private String queueName;
-	
+
 	@Bean
-	public Queue queueRPC() {
+	public Queue singleModeQueue() {
 		return new Queue(queueName);
 	}
 }

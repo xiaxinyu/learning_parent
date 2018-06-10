@@ -1,4 +1,4 @@
-package org.learning.rabbitmq.producer.rabbitmq.exchange.pubsub;
+package org.learning.rabbitmq.producer.exchange.pubsub;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.beans.factory.annotation.Value;

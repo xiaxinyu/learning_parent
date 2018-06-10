@@ -1,4 +1,4 @@
-package org.learning.rabbitmq.producer.rabbitmq.exchange.routing;
+package org.learning.rabbitmq.producer.exchange.routing;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

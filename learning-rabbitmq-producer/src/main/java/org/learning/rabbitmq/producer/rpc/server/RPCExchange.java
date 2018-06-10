@@ -1,4 +1,4 @@
-package org.learning.rabbitmq.producer.rabbitmq.rpc.server;
+package org.learning.rabbitmq.producer.rpc.server;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
