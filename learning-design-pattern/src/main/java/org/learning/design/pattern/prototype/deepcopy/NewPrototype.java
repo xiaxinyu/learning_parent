@@ -2,6 +2,11 @@ package org.learning.design.pattern.prototype.deepcopy;
 
 import org.learning.design.pattern.prototype.lightcopy.Prototype;
 
+/**
+ * 深拷贝不仅拷贝对象本身，而且拷贝对象包含的引用指向的所有对象。
+ * @author summer.xiasz
+ *
+ */
 public class NewPrototype implements Cloneable {
 	private String id;
 	private Prototype prototype;
@@ -22,6 +27,7 @@ public class NewPrototype implements Cloneable {
 		this.prototype = prototype;
 	}
 
+	@Override
 	public Object clone() {
 		NewPrototype ret = null;
 		try {
