@@ -1,0 +1,8 @@
+mybatis:
+  type-aliases-package: org.learning.mybatis.bean
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521/ORCL
+    username: scott
+    password: summer

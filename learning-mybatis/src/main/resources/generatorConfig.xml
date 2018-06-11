@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry location="D:\apache-maven-3.0.4\.m2\repository\com\oracle\ojdbc6\11.2.0.3\ojdbc6-11.2.0.3.jar"/>
+
+  <context id="context1">
+  	<commentGenerator>    
+        <property name="suppressAllComments" value="true"/>    
+    </commentGenerator> 
+    <jdbcConnection connectionURL="jdbc:oracle:thin:@127.0.0.1:1521/ORCL" driverClass="oracle.jdbc.OracleDriver" password="summer" userId="scott" />
+    <javaModelGenerator targetPackage="org.learning.mybatis.bean" targetProject="src/main/java" />
+    <sqlMapGenerator targetPackage="org.learning.mybatis.mapper" targetProject="src/main/java" />
+    <javaClientGenerator targetPackage="org.learning.mybatis.dao" targetProject="src/main/java" type="XMLMAPPER" />
+    <table schema="scott" tableName="dept" enableDeleteByPrimaryKey="true" enableInsert="true" selectByPrimaryKeyQueryId="true">
+      <columnOverride column="DEPTNO" property="deptNo" />
+      <columnOverride column="DNAME" property="deptName" />
+      <columnOverride column="LOC" property="location" />
+    </table>
+  </context>
+</generatorConfiguration>

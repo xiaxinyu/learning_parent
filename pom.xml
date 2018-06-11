@@ -58,6 +58,7 @@
     <module>learning-rabbitmq-producer</module>
     <module>learning-rabbitmq-consumer</module>
     <module>learning-spring-mvc</module>
+    <module>learning-mybatis</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
