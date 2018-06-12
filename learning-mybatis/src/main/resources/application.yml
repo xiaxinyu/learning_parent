@@ -1,4 +1,5 @@
 mybatis:
+  mapper-locations: classpath:org/learning/mybatis/mapper/*.xml
   type-aliases-package: org.learning.mybatis.bean
 spring:
   datasource:

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.learning.mybatis.mapper.DeptMapper">
+	<resultMap id="BaseResultMap" type="org.learning.mybatis.bean.Dept">
+		<id column="DEPTNO" property="deptNo" jdbcType="DECIMAL" />
+		<result column="DNAME" property="deptName" jdbcType="VARCHAR" />
+		<result column="LOC" property="location" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select DEPTNO, DNAME, LOC
+		from SCOTT.DEPT
+		where DEPTNO = #{deptNo,jdbcType=DECIMAL}
+	</select>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from SCOTT.DEPT
+		where DEPTNO = #{deptNo,jdbcType=DECIMAL}
+	</delete>
+
+	<insert id="insert" parameterType="org.learning.mybatis.bean.Dept">
+		insert into SCOTT.DEPT (DEPTNO, DNAME, LOC)
+		values (#{deptNo,jdbcType=DECIMAL}, #{deptName,jdbcType=VARCHAR},
+		#{location,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<update id="updateByPrimaryKey" parameterType="org.learning.mybatis.bean.Dept">
+		update SCOTT.DEPT
+		set DNAME = #{deptName,jdbcType=VARCHAR},
+		LOC = #{location,jdbcType=VARCHAR}
+		where DEPTNO = #{deptNo,jdbcType=DECIMAL}
+	</update>
+</mapper>

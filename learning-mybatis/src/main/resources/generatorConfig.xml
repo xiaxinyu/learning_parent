@@ -11,7 +11,7 @@
     <javaModelGenerator targetPackage="org.learning.mybatis.bean" targetProject="src/main/java" />
     <sqlMapGenerator targetPackage="org.learning.mybatis.mapper" targetProject="src/main/java" />
     <javaClientGenerator targetPackage="org.learning.mybatis.dao" targetProject="src/main/java" type="XMLMAPPER" />
-    <table schema="scott" tableName="dept" enableDeleteByPrimaryKey="true" enableInsert="true" selectByPrimaryKeyQueryId="true">
+    <table schema="scott" tableName="DEPT" enableDeleteByPrimaryKey="true" enableInsert="true" selectByPrimaryKeyQueryId="true">
       <columnOverride column="DEPTNO" property="deptNo" />
       <columnOverride column="DNAME" property="deptName" />
       <columnOverride column="LOC" property="location" />

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.learning.mybatis.mapper.EmpMapper">
+	<resultMap id="BaseResultMap" type="org.learning.mybatis.bean.Emp">
+		<id column="EMPNO" property="employeeNO" jdbcType="DECIMAL" />
+		<result column="ENAME" property="employeeName" jdbcType="VARCHAR" />
+		<result column="JOB" property="job" jdbcType="VARCHAR" />
+		<result column="MGR" property="mgr" jdbcType="DECIMAL" />
+		<result column="HIREDATE" property="hireDate" jdbcType="TIMESTAMP" />
+		<result column="SAL" property="salary" jdbcType="DECIMAL" />
+		<result column="COMM" property="comm" jdbcType="DECIMAL" />
+		<association property="dept" javaType="org.learning.mybatis.bean.Dept">
+			<result column="DEPTNO" property="deptNo" jdbcType="DECIMAL" />
+			<result column="DNAME" property="deptName" jdbcType="VARCHAR" />
+			<result column="LOC" property="location" jdbcType="VARCHAR" />
+		</association>
+	</resultMap>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select E.EMPNO, E.ENAME, E.JOB, E.MGR, E.HIREDATE, E.SAL, E.COMM, D.DEPTNO, D.DNAME, D.LOC
+		from SCOTT.EMP E INNER JOIN SCOTT.DEPT D ON E.DEPTNO = D.DEPTNO
+		where EMPNO = #{employeeNO,jdbcType=DECIMAL}
+	</select>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from SCOTT.EMP
+		where EMPNO = #{employeeNO,jdbcType=DECIMAL}
+	</delete>
+
+	<insert id="insert" parameterType="org.learning.mybatis.bean.Emp">
+		insert into SCOTT.EMP (EMPNO, ENAME, JOB,
+		MGR, HIREDATE, SAL,
+		COMM, DEPTNO)
+		values (#{employeeNO,jdbcType=DECIMAL}, #{employeeName,jdbcType=VARCHAR},
+		#{job,jdbcType=VARCHAR},
+		#{mgr,jdbcType=DECIMAL}, #{hireDate,jdbcType=TIMESTAMP}, #{salary,jdbcType=DECIMAL},
+		#{comm,jdbcType=DECIMAL}, #{dept.deptNo,jdbcType=DECIMAL})
+	</insert>
+
+	<update id="updateByPrimaryKey" parameterType="org.learning.mybatis.bean.Emp">
+		update SCOTT.EMP
+		set ENAME = #{employeeName,jdbcType=VARCHAR},
+		JOB = #{job,jdbcType=VARCHAR},
+		MGR = #{mgr,jdbcType=DECIMAL},
+		HIREDATE = #{hireDate,jdbcType=TIMESTAMP},
+		SAL = #{salary,jdbcType=DECIMAL},
+		COMM = #{comm,jdbcType=DECIMAL},
+		DEPTNO = #{dept.deptNo,jdbcType=DECIMAL}
+		where EMPNO = #{employeeNO,jdbcType=DECIMAL}
+	</update>
+</mapper>
