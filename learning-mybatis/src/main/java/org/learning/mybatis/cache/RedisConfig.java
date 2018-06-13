@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.learning.mybatis.core.Constants;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
@@ -46,7 +47,7 @@ public class RedisConfig extends CachingConfigurerSupport {
 		manager.setDefaultExpiration(3600L);
 		// 设置缓存过期时间。key和缓存过期时间，单位秒
 		Map<String, Long> expiresMap = new HashMap<>();
-		expiresMap.put("user", 1000L);
+		expiresMap.put(Constants.APP_CACHE_NAME, 1000L);
 		manager.setExpires(expiresMap);
 		return manager;
 	}
