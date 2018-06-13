@@ -1,6 +1,10 @@
 package org.learning.mybatis.bean;
 
-public class Dept {
+import java.io.Serializable;
+
+public class Dept implements Serializable{
+	private static final long serialVersionUID = 1L;
+
 	private Integer deptNo;
 
 	private String deptName;

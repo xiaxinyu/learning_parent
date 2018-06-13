@@ -1,9 +1,11 @@
 package org.learning.mybatis.bean;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Emp {
+public class Emp implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private Integer employeeNO;
 	private String employeeName;
 	private String job;

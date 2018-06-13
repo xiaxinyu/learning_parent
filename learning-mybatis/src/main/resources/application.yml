@@ -7,3 +7,13 @@ spring:
     url: jdbc:oracle:thin:@127.0.0.1:1521/ORCL
     username: scott
     password: summer
+  redis:
+    database: 0
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+    sentinel:
+      master: mymaster
+      nodes: 192.168.179.131:28000,192.168.179.131:28001,192.168.179.131:28002
