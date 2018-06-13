@@ -11,9 +11,9 @@ public class RedisAndSessionConfig {
 	@Bean
 	public RedisConnectionFactory jedisConnectionFactory() {
 		RedisSentinelConfiguration sentinelConfig = new RedisSentinelConfiguration().master("mymaster")
-				.sentinel("192.168.179.131", 28000);
-				/*.sentinel("192.168.179.131", 28001)
-				.sentinel("192.168.179.131", 28002)*/
+				.sentinel("192.168.179.131", 28000)
+				.sentinel("192.168.179.131", 28001)
+				.sentinel("192.168.179.131", 28002);
 		return new JedisConnectionFactory(sentinelConfig);
 	}
 }
