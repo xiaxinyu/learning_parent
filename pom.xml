@@ -60,6 +60,7 @@
     <module>learning-spring-mvc</module>
     <module>learning-mybatis</module>
     <module>learning-spring-batch</module>
+    <module>learning-quartz</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
