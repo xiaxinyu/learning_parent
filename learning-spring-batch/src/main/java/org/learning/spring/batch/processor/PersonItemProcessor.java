@@ -1,4 +1,4 @@
-package org.learning.spring.processor;
+package org.learning.spring.batch.processor;
 
 import org.learning.spring.batch.bean.Person;
 import org.slf4j.Logger;

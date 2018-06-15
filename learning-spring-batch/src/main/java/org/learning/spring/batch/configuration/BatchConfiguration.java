@@ -3,7 +3,7 @@ import javax.sql.DataSource;
 
 import org.learning.spring.batch.bean.Person;
 import org.learning.spring.batch.listener.JobCompletionNotificationListener;
-import org.learning.spring.processor.PersonItemProcessor;
+import org.learning.spring.batch.processor.PersonItemProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.Step;
@@ -25,8 +25,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-@Configuration
-@EnableBatchProcessing
 public class BatchConfiguration {
 
     @Autowired
