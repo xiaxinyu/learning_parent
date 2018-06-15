@@ -12,7 +12,8 @@ import org.springframework.core.io.ClassPathResource;
 public class CCBCreditReader {
 	@Bean
 	public ItemStreamReader<CCBCreditCSVBean> ccbCreditCSVReader() {
-		return new FlatFileItemReaderBuilder<CCBCreditCSVBean>().name("personItemReader")
+		return new FlatFileItemReaderBuilder<CCBCreditCSVBean>()
+				.name("personItemReader")
 				.resource(new ClassPathResource("中国建设银行信用卡账单（2018年06月）.txt"))
 				.delimited()
 				.names(new String[] { "transactionDate", "bookDate", "cardNumberSuffix", "transactionAmount",
