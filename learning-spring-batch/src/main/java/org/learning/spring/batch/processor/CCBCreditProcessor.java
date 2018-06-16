@@ -1,13 +1,13 @@
 package org.learning.spring.batch.processor;
 
-import org.learning.spring.batch.bean.CCBCreditCSVBean;
-import org.learning.spring.batch.bean.DataLineBean;
+import org.learning.spring.batch.bean.ccb.CCBCreditCSVBean;
+import org.learning.spring.batch.bean.ccb.CCBCreditDataLineBean;
 import org.springframework.batch.item.ItemProcessor;
 
-public class CCBCreditProcessor implements ItemProcessor<CCBCreditCSVBean, DataLineBean> {
+public class CCBCreditProcessor implements ItemProcessor<CCBCreditCSVBean, CCBCreditDataLineBean> {
 
 	@Override
-	public DataLineBean process(CCBCreditCSVBean orginalBean) throws Exception {
-		return new DataLineBean(orginalBean.getCardNumberSuffix(), orginalBean.getTransactionDescription());
+	public CCBCreditDataLineBean process(CCBCreditCSVBean orginalBean) throws Exception {
+		return new CCBCreditDataLineBean(orginalBean.getCardNumberSuffix(), orginalBean.getTransactionDescription());
 	}
 }

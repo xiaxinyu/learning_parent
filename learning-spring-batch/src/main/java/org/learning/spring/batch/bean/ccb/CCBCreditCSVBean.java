@@ -1,4 +1,4 @@
-package org.learning.spring.batch.bean;
+package org.learning.spring.batch.bean.ccb;
 
 public class CCBCreditCSVBean {
 	private String transactionDate;

@@ -1,6 +1,6 @@
 package org.learning.spring.batch.reader;
 
-import org.learning.spring.batch.bean.CCBCreditCSVBean;
+import org.learning.spring.batch.bean.ccb.CCBCreditCSVBean;
 import org.learning.spring.batch.line.tokennizer.CCBCreditLineTokennizer;
 import org.springframework.batch.item.ItemStreamReader;
 import org.springframework.batch.item.file.FlatFileItemReader;

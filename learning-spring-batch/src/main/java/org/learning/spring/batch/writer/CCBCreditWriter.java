@@ -1,6 +1,6 @@
 package org.learning.spring.batch.writer;
 
-import org.learning.spring.batch.bean.DataLineBean;
+import org.learning.spring.batch.bean.ccb.CCBCreditDataLineBean;
 import org.springframework.batch.item.ItemStreamWriter;
 import org.springframework.batch.item.file.builder.FlatFileItemWriterBuilder;
 import org.springframework.batch.item.file.transform.DelimitedLineAggregator;
@@ -11,11 +11,11 @@ import org.springframework.core.io.FileSystemResource;
 @Configuration
 public class CCBCreditWriter {
 	@Bean
-	public ItemStreamWriter<DataLineBean> ccbCreditCSVWriter() {
-        return new FlatFileItemWriterBuilder<DataLineBean>()
+	public ItemStreamWriter<CCBCreditDataLineBean> ccbCreditWriter() {
+        return new FlatFileItemWriterBuilder<CCBCreditDataLineBean>()
         		.lineSeparator("\n")
         		.lineAggregator(new DelimitedLineAggregator<>())
-        		.resource(new FileSystemResource("final.txt"))
+        		.resource(new FileSystemResource("ccb-final.txt"))
         		.name("cardNumber,transactionDescription").build();
     }
 }

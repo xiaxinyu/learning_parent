@@ -2,11 +2,10 @@ package org.learning.spring.batch.line.tokennizer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
-import org.learning.spring.batch.exception.CCBCreditParseException;
+import org.learning.spring.batch.exception.CSVParseException;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 
 public class CCBCreditLineTokennizer extends DelimitedLineTokenizer {
@@ -28,7 +27,8 @@ public class CCBCreditLineTokennizer extends DelimitedLineTokenizer {
 
 			int resultSize = result.size();
 			if (resultSize < fieldCount) {
-				throw new CCBCreditParseException("DataLine's size less than " + fieldCount, line);
+				throw new CSVParseException(CCBCreditLineTokennizer.class.getName(),
+						"CCBDataLine's size less than " + fieldCount, line);
 			} else if (resultSize > fieldCount) {
 				List<String> newItems = new ArrayList<String>();
 				StringBuilder mergeItem = new StringBuilder();
@@ -48,7 +48,7 @@ public class CCBCreditLineTokennizer extends DelimitedLineTokenizer {
 				result = newItems;
 			}
 		} else {
-			throw new CCBCreditParseException("Parsed line is blank.");
+			throw new CSVParseException(CCBCreditLineTokennizer.class.getName(), "Parsed line is blank.");
 		}
 		return result;
 	}

@@ -1,8 +1,8 @@
-package org.learning.spring.batch.bean;
+package org.learning.spring.batch.bean.ccb;
 
 import java.util.Date;
 
-public class DataLineBean {
+public class CCBCreditDataLineBean {
 	private Date transactionDate;
 	private Date bookDate;
 	private String cardNumber;
@@ -11,7 +11,7 @@ public class DataLineBean {
 	private Double settlementAmount;
 	private String transactionDescription;
 
-	public DataLineBean(String cardNumber, String transactionDescription) {
+	public CCBCreditDataLineBean(String cardNumber, String transactionDescription) {
 		this.cardNumber = cardNumber;
 		this.transactionDescription = transactionDescription;
 	}
