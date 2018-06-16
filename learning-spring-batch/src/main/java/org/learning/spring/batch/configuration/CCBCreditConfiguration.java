@@ -3,6 +3,7 @@ package org.learning.spring.batch.configuration;
 import org.learning.spring.batch.bean.CCBCreditCSVBean;
 import org.learning.spring.batch.bean.DataLineBean;
 import org.learning.spring.batch.listener.CCBCreditItemReaderListener;
+import org.learning.spring.batch.listener.CCBCreditJobEexecutionListener;
 import org.learning.spring.batch.policy.CCBCreditSkipPolicy;
 import org.learning.spring.batch.processor.CCBCreditProcessor;
 import org.springframework.batch.core.Job;
@@ -36,6 +37,7 @@ public class CCBCreditConfiguration {
 		return stepBuilderFactory.get("ccbCreditCSVStep")
 				.<CCBCreditCSVBean, DataLineBean>chunk(10)
 				.listener(new CCBCreditItemReaderListener())
+				.listener(new CCBCreditJobEexecutionListener())
 				.reader(ccbCreditCSVReader)
 				.processor(new CCBCreditProcessor())
 				.writer(ccbCreditCSVWriter)
@@ -45,9 +47,9 @@ public class CCBCreditConfiguration {
 	}
 
 	@Bean
-	public Job importUserJob(Step ccbCreditCSVStep) {
+	public Job importCCBCreditCSVJob(Step ccbCreditCSVStep) {
 		return jobBuilderFactory
-				.get("importUserJob")
+				.get("importCCBCreditCSVJob")
 				.flow(ccbCreditCSVStep)
 				.end()
 				.build();
