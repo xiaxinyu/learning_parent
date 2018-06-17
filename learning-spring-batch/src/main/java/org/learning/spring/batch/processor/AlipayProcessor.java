@@ -1,6 +1,7 @@
 package org.learning.spring.batch.processor;
 
 import org.learning.spring.batch.bean.alipay.AlipayCSVBean;
+import org.learning.spring.batch.exception.ProcessorEpxception;
 import org.springframework.batch.item.ItemProcessor;
 
 public class AlipayProcessor implements ItemProcessor<AlipayCSVBean, AlipayCSVBean> {
@@ -23,6 +24,9 @@ public class AlipayProcessor implements ItemProcessor<AlipayCSVBean, AlipayCSVBe
 		result.setRefundMoney(orginalBean.getRefundMoney().trim());
 		result.setComment(orginalBean.getComment().trim());
 		result.setCashStatus(orginalBean.getCashStatus().trim());
+		if (result.getTransactionNumber().equals("20180608324979197861")) {
+			throw new ProcessorEpxception(AlipayProcessor.class.getName(), result.toString());
+		}
 		return result;
 	}
 }

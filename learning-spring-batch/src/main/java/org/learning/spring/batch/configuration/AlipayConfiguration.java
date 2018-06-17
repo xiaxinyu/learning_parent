@@ -1,6 +1,7 @@
 package org.learning.spring.batch.configuration;
 
 import org.learning.spring.batch.bean.alipay.AlipayCSVBean;
+import org.learning.spring.batch.listener.AlipayItemProcessListener;
 import org.learning.spring.batch.listener.AlipayItemReaderListener;
 import org.learning.spring.batch.listener.CSVJobEexecutionListener;
 import org.learning.spring.batch.policy.retry.CSVRetryPolicy;
@@ -12,7 +13,6 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemStreamReader;
 import org.springframework.batch.item.ItemStreamWriter;
-import org.springframework.batch.item.file.FlatFileParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,13 +36,12 @@ public class AlipayConfiguration {
 		return stepBuilderFactory.get("alipayCSVStep")
 				.<AlipayCSVBean, AlipayCSVBean>chunk(10)
 				.listener(new AlipayItemReaderListener())
+				.listener(new AlipayItemProcessListener())
 				.reader(alipayCSVReader)
 				.processor(new AlipayProcessor())
 				.writer(alipayCSVWriter)
 				.faultTolerant()
-//				.skipPolicy(new CSVSkipPolicy())
-//				.skipLimit(Integer.MAX_VALUE)
-				.skip(FlatFileParseException.class)
+				.skipPolicy(new CSVSkipPolicy())
 				.retryPolicy(new CSVRetryPolicy())
 				.listener(new CSVJobEexecutionListener("Alipay"))
 				.build();
