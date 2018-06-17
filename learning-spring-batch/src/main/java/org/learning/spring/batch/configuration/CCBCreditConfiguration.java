@@ -2,9 +2,10 @@ package org.learning.spring.batch.configuration;
 
 import org.learning.spring.batch.bean.ccb.CCBCreditCSVBean;
 import org.learning.spring.batch.bean.ccb.CCBCreditDataLineBean;
-import org.learning.spring.batch.listener.CSVItemReaderListener;
+import org.learning.spring.batch.listener.CCBCreditItemReaderListener;
 import org.learning.spring.batch.listener.CSVJobEexecutionListener;
-import org.learning.spring.batch.policy.CSVSkipPolicy;
+import org.learning.spring.batch.policy.retry.CSVRetryPolicy;
+import org.learning.spring.batch.policy.skip.CSVSkipPolicy;
 import org.learning.spring.batch.processor.CCBCreditProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -34,13 +35,14 @@ public class CCBCreditConfiguration {
 	public Step ccbCreditCSVStep() {
 		return stepBuilderFactory.get("ccbCreditCSVStep")
 				.<CCBCreditCSVBean, CCBCreditDataLineBean>chunk(10)
-				.listener(new CSVItemReaderListener("CCBCredit"))
-				.listener(new CSVJobEexecutionListener("CCBCredit"))
+				.listener(new CCBCreditItemReaderListener())
 				.reader(ccbCreditCSVReader)
 				.processor(new CCBCreditProcessor())
 				.writer(ccbCreditCSVWriter)
 				.faultTolerant()
 				.skipPolicy(new CSVSkipPolicy())
+				.retryPolicy(new CSVRetryPolicy())
+				.listener(new CSVJobEexecutionListener("CCBCredit"))
 				.build();
 	}
 

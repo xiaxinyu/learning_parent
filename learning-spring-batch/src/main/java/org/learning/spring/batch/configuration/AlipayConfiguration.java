@@ -1,9 +1,10 @@
 package org.learning.spring.batch.configuration;
 
 import org.learning.spring.batch.bean.alipay.AlipayCSVBean;
-import org.learning.spring.batch.listener.CSVItemReaderListener;
+import org.learning.spring.batch.listener.AlipayItemReaderListener;
 import org.learning.spring.batch.listener.CSVJobEexecutionListener;
-import org.learning.spring.batch.policy.CSVSkipPolicy;
+import org.learning.spring.batch.policy.retry.CSVRetryPolicy;
+import org.learning.spring.batch.policy.skip.CSVSkipPolicy;
 import org.learning.spring.batch.processor.AlipayProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -11,6 +12,7 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemStreamReader;
 import org.springframework.batch.item.ItemStreamWriter;
+import org.springframework.batch.item.file.FlatFileParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,13 +35,16 @@ public class AlipayConfiguration {
 	public Step alipayCSVStep() {
 		return stepBuilderFactory.get("alipayCSVStep")
 				.<AlipayCSVBean, AlipayCSVBean>chunk(10)
-				.listener(new CSVItemReaderListener("Alipay"))
-				.listener(new CSVJobEexecutionListener("Alipay"))
+				.listener(new AlipayItemReaderListener())
 				.reader(alipayCSVReader)
 				.processor(new AlipayProcessor())
 				.writer(alipayCSVWriter)
 				.faultTolerant()
-				.skipPolicy(new CSVSkipPolicy())
+//				.skipPolicy(new CSVSkipPolicy())
+//				.skipLimit(Integer.MAX_VALUE)
+				.skip(FlatFileParseException.class)
+				.retryPolicy(new CSVRetryPolicy())
+				.listener(new CSVJobEexecutionListener("Alipay"))
 				.build();
 	}
 

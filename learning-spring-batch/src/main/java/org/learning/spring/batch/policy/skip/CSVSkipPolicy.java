@@ -1,4 +1,4 @@
-package org.learning.spring.batch.policy;
+package org.learning.spring.batch.policy.skip;
 
 import org.learning.spring.batch.exception.CSVParseException;
 import org.springframework.batch.core.step.skip.AlwaysSkipItemSkipPolicy;
