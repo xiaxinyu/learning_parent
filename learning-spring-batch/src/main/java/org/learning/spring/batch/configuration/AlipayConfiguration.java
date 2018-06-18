@@ -3,10 +3,12 @@ package org.learning.spring.batch.configuration;
 import org.learning.spring.batch.bean.alipay.AlipayCSVBean;
 import org.learning.spring.batch.listener.AlipayItemProcessListener;
 import org.learning.spring.batch.listener.AlipayItemReaderListener;
+import org.learning.spring.batch.listener.AlipayItemWriterListener;
 import org.learning.spring.batch.listener.CSVJobEexecutionListener;
 import org.learning.spring.batch.policy.retry.CSVRetryPolicy;
 import org.learning.spring.batch.policy.skip.CSVSkipPolicy;
 import org.learning.spring.batch.processor.AlipayProcessor;
+import org.learning.spring.batch.writer.AlipayItemWriter;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -37,9 +39,10 @@ public class AlipayConfiguration {
 				.<AlipayCSVBean, AlipayCSVBean>chunk(10)
 				.listener(new AlipayItemReaderListener())
 				.listener(new AlipayItemProcessListener())
+				.listener(new AlipayItemWriterListener())
 				.reader(alipayCSVReader)
 				.processor(new AlipayProcessor())
-				.writer(alipayCSVWriter)
+				.writer(new AlipayItemWriter())
 				.faultTolerant()
 				.skipPolicy(new CSVSkipPolicy())
 				.retryPolicy(new CSVRetryPolicy())
