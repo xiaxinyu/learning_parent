@@ -26,5 +26,9 @@ public class HashMapTest {
 		System.out.println(map.get("winner"));
 		
 		System.out.println(2<<1);
+		
+		System.out.println(2&3);
+		
+		System.out.println(60>>>3);
 	}
 }
