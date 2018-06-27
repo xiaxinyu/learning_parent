@@ -1,7 +1,10 @@
 package org.learning.data.structure.map;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class HashMapTest {
 	public static void main(String[] args) {
@@ -30,5 +33,13 @@ public class HashMapTest {
 		System.out.println(2&3);
 		
 		System.out.println(60>>>3);
+		
+		//loop
+		Set<Entry<String, String>> set = map.entrySet();
+		Iterator<Entry<String, String>> iterator = set.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+			iterator.remove();
+		}
 	}
 }
