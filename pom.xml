@@ -61,6 +61,7 @@
     <module>learning-mybatis</module>
     <module>learning-spring-batch</module>
     <module>learning-quartz</module>
+    <module>learning-java-cas</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
