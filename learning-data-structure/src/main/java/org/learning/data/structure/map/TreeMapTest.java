@@ -32,8 +32,8 @@ public class TreeMapTest {
 		tree.put(34, "summer9");
 		tree.put(67, "summer10");
 
-		Set<Integer> setKey = tree.keySet();
-		Iterator<Integer> iteratorKey = setKey.iterator();
+		Set<Entry<Integer, String>> setKey = tree.entrySet();
+		Iterator<Entry<Integer, String>> iteratorKey = setKey.iterator();
 		while (iteratorKey.hasNext()) {
 			System.out.println(iteratorKey.next());
 		}
