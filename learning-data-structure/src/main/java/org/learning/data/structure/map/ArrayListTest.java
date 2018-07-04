@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ArrayListTest {
 	public static void main(String[] args) {
-		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<String> list = new ArrayList<String>(3);
 		list.add("summer");
 		list.add("winner");
 		list.add("autumn");
@@ -12,5 +12,8 @@ public class ArrayListTest {
 		for (String value : list) {
 			System.out.println(value);
 		}
+		
+		System.out.println(3>>1);
+		System.out.println(4>>1);
 	}
 }
