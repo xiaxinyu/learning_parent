@@ -1,4 +1,4 @@
-package org.learning.netty.http.server;
+package org.learning.netty.http.server.v1;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;

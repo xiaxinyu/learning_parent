@@ -1,4 +1,4 @@
-package org.learning.netty.http.server;
+package org.learning.netty.http.server.v1;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
