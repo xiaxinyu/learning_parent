@@ -1,4 +1,4 @@
-package org.learning.netty.ftp;
+package org.learning.netty.ftp.v1;
 
 import java.io.File;
 import java.io.Serializable;

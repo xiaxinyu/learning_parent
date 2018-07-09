@@ -1,4 +1,4 @@
-package org.learning.netty.ftp;
+package org.learning.netty.ftp.v1;
 
 import java.io.RandomAccessFile;
 
@@ -21,24 +21,26 @@ public class FileUploadClientHandler extends ChannelInboundHandlerAdapter {
 		}
 		this.uploadFile = file;
 	}
-	
+
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
-		 randomAccessFile = new RandomAccessFile(uploadFile.getFile(), "r");
-         randomAccessFile.seek(uploadFile.getStartPos());
-         lastLength = (int) randomAccessFile.length() / 10;
-         byte[] bytes = new byte[lastLength];
-         if ((byteRead = randomAccessFile.read(bytes)) != -1) {
-        	 uploadFile.setEndPos(byteRead);
-        	 uploadFile.setBytes(bytes);
-             ctx.writeAndFlush(uploadFile);
-         } else {
-             System.out.println("文件已经读完");
-         }
+		System.out.println("channelActive");
+		randomAccessFile = new RandomAccessFile(uploadFile.getFile(), "r");
+		randomAccessFile.seek(uploadFile.getStartPos());
+		lastLength = (int) randomAccessFile.length() / 10;
+		byte[] bytes = new byte[lastLength];
+		if ((byteRead = randomAccessFile.read(bytes)) != -1) {
+			uploadFile.setEndPos(byteRead);
+			uploadFile.setBytes(bytes);
+			ctx.writeAndFlush(uploadFile);
+		} else {
+			System.out.println("文件已经读完");
+		}
 	}
-	
+
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+		System.out.println("channelRead");
 		if (msg instanceof Integer) {
 			start = (Integer) msg;
 			if (start != -1) {
@@ -70,9 +72,9 @@ public class FileUploadClientHandler extends ChannelInboundHandlerAdapter {
 			}
 		}
 	}
-	
+
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        cause.printStackTrace();
-        ctx.close();
-    }
+		cause.printStackTrace();
+		ctx.close();
+	}
 }

@@ -1,4 +1,4 @@
-package org.learning.netty.ftp;
+package org.learning.netty.ftp.v1;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
