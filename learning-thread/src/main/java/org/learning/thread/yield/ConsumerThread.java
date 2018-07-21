@@ -2,7 +2,7 @@ package org.learning.thread.yield;
 
 import java.util.Queue;
 
-import org.learning.thread.wait.Phone;
+import org.learning.thread.wait.notify.Phone;
 
 public class ConsumerThread extends Thread {
 	private Queue<Phone> pool;

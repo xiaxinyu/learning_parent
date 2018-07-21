@@ -3,7 +3,7 @@ package org.learning.thread.yield;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import org.learning.thread.wait.Phone;
+import org.learning.thread.wait.notify.Phone;
 
 public class YieldTest {
 	public static void main(String[] args) {
