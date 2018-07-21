@@ -4,17 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-
- /* Job Priority : 1, Count : 5
- Job Priority : 1, Count : 6
- Job Priority : 1, Count : 4
- Job Priority : 1, Count : 3
- Job Priority : 1, Count : 5
- Job Priority : 10, Count : 52987856
- Job Priority : 10, Count : 80598825
- Job Priority : 10, Count : 52987801
- Job Priority : 10, Count : 80598855
- Job Priority : 10, Count : 52987841*/
+/* Job Priority : 1, Count : 5
+Job Priority : 1, Count : 6
+Job Priority : 1, Count : 4
+Job Priority : 1, Count : 3
+Job Priority : 1, Count : 5
+Job Priority : 10, Count : 52987856
+Job Priority : 10, Count : 80598825
+Job Priority : 10, Count : 52987801
+Job Priority : 10, Count : 80598855
+Job Priority : 10, Count : 52987841*/
 public class PriorityTest {
 	private static volatile boolean notStart = true;
 	private static volatile boolean notEnd = true;
@@ -29,9 +28,9 @@ public class PriorityTest {
 			thread.setPriority(priority);
 			thread.start();
 		}
-		notStart = false;
-		TimeUnit.SECONDS.sleep(10);
-		notEnd = false;
+		notStart = false; // 设置统一开始
+		TimeUnit.SECONDS.sleep(30); // 设置运行10秒钟
+		notEnd = false; // 设置统一结束
 		for (Job job : jobs) {
 			System.out.println(" Job Priority : " + job.priority + ", Count : " + job.jobCount);
 		}
