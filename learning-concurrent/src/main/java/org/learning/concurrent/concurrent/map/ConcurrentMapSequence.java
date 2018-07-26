@@ -1,4 +1,4 @@
-package org.learning.concurrent.sequence.concurrent.map;
+package org.learning.concurrent.concurrent.map;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;

@@ -1,4 +1,4 @@
-package org.learning.concurrent.sequence.concurrent.map;
+package org.learning.concurrent.concurrent.map;
 
 public class Consumer implements Runnable {
 	private String sequenceName;
