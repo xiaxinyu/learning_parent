@@ -63,6 +63,7 @@
     <module>learning-quartz</module>
     <module>learning-java-cas</module>
     <module>learning-big-data-hdfs</module>
+    <module>learning-jdk8</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
