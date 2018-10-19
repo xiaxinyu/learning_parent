@@ -1,117 +1,117 @@
-jstat
+ï»¿jstat
 
-1¡¢jstat -gc 2060
-S0C£ºµÚÒ»¸öÐÒ´æÇøµÄ´óÐ¡
-S1C£ºµÚ¶þ¸öÐÒ´æÇøµÄ´óÐ¡
-S0U£ºµÚÒ»¸öÐÒ´æÇøµÄÊ¹ÓÃ´óÐ¡
-S1U£ºµÚ¶þ¸öÐÒ´æÇøµÄÊ¹ÓÃ´óÐ¡
-EC£ºÒÁµéÔ°ÇøµÄ´óÐ¡
-EU£ºÒÁµéÔ°ÇøµÄÊ¹ÓÃ´óÐ¡
-OC£ºÀÏÄê´ú´óÐ¡
-OU£ºÀÏÄê´úÊ¹ÓÃ´óÐ¡
-MC£º·½·¨Çø´óÐ¡
-MU£º·½·¨ÇøÊ¹ÓÃ´óÐ¡
-CCSC:Ñ¹ËõÀà¿Õ¼ä´óÐ¡
-CCSU:Ñ¹ËõÀà¿Õ¼äÊ¹ÓÃ´óÐ¡
-YGC£ºÄêÇá´úÀ¬»ø»ØÊÕ´ÎÊý
-YGCT£ºÄêÇá´úÀ¬»ø»ØÊÕÏûºÄÊ±¼ä
-FGC£ºÀÏÄê´úÀ¬»ø»ØÊÕ´ÎÊý
-FGCT£ºÀÏÄê´úÀ¬»ø»ØÊÕÏûºÄÊ±¼ä
-GCT£ºÀ¬»ø»ØÊÕÏûºÄ×ÜÊ±¼ä
+1ã€jstat -gc 2060
+S0Cï¼šç¬¬ä¸€ä¸ªå¹¸å­˜åŒºçš„å¤§å°
+S1Cï¼šç¬¬äºŒä¸ªå¹¸å­˜åŒºçš„å¤§å°
+S0Uï¼šç¬¬ä¸€ä¸ªå¹¸å­˜åŒºçš„ä½¿ç”¨å¤§å°
+S1Uï¼šç¬¬äºŒä¸ªå¹¸å­˜åŒºçš„ä½¿ç”¨å¤§å°
+ECï¼šä¼Šç”¸å›­åŒºçš„å¤§å°
+EUï¼šä¼Šç”¸å›­åŒºçš„ä½¿ç”¨å¤§å°
+OCï¼šè€å¹´ä»£å¤§å°
+OUï¼šè€å¹´ä»£ä½¿ç”¨å¤§å°
+MCï¼šæ–¹æ³•åŒºå¤§å°
+MUï¼šæ–¹æ³•åŒºä½¿ç”¨å¤§å°
+CCSC:åŽ‹ç¼©ç±»ç©ºé—´å¤§å°
+CCSU:åŽ‹ç¼©ç±»ç©ºé—´ä½¿ç”¨å¤§å°
+YGCï¼šå¹´è½»ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+YGCTï¼šå¹´è½»ä»£åžƒåœ¾å›žæ”¶æ¶ˆè€—æ—¶é—´
+FGCï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCTï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¶ˆè€—æ—¶é—´
+GCTï¼šåžƒåœ¾å›žæ”¶æ¶ˆè€—æ€»æ—¶é—´
 
-2¡¢jstat -gccapacity 2060
-NGCMN£ºÐÂÉú´ú×îÐ¡ÈÝÁ¿
-NGCMX£ºÐÂÉú´ú×î´óÈÝÁ¿
-NGC£ºµ±Ç°ÐÂÉú´úÈÝÁ¿
-S0C£ºµÚÒ»¸öÐÒ´æÇø´óÐ¡
-S1C£ºµÚ¶þ¸öÐÒ´æÇøµÄ´óÐ¡
-EC£ºÒÁµéÔ°ÇøµÄ´óÐ¡
-OGCMN£ºÀÏÄê´ú×îÐ¡ÈÝÁ¿
-OGCMX£ºÀÏÄê´ú×î´óÈÝÁ¿
-OGC£ºµ±Ç°ÀÏÄê´ú´óÐ¡
-OC:µ±Ç°ÀÏÄê´ú´óÐ¡
-MCMN:×îÐ¡ÔªÊý¾ÝÈÝÁ¿
-MCMX£º×î´óÔªÊý¾ÝÈÝÁ¿
-MC£ºµ±Ç°ÔªÊý¾Ý¿Õ¼ä´óÐ¡
-CCSMN£º×îÐ¡Ñ¹ËõÀà¿Õ¼ä´óÐ¡
-CCSMX£º×î´óÑ¹ËõÀà¿Õ¼ä´óÐ¡
-CCSC£ºµ±Ç°Ñ¹ËõÀà¿Õ¼ä´óÐ¡
-YGC£ºÄêÇá´úgc´ÎÊý
-FGC£ºÀÏÄê´úGC´ÎÊý
+2ã€jstat -gccapacity 2060
+NGCMNï¼šæ–°ç”Ÿä»£æœ€å°å®¹é‡
+NGCMXï¼šæ–°ç”Ÿä»£æœ€å¤§å®¹é‡
+NGCï¼šå½“å‰æ–°ç”Ÿä»£å®¹é‡
+S0Cï¼šç¬¬ä¸€ä¸ªå¹¸å­˜åŒºå¤§å°
+S1Cï¼šç¬¬äºŒä¸ªå¹¸å­˜åŒºçš„å¤§å°
+ECï¼šä¼Šç”¸å›­åŒºçš„å¤§å°
+OGCMNï¼šè€å¹´ä»£æœ€å°å®¹é‡
+OGCMXï¼šè€å¹´ä»£æœ€å¤§å®¹é‡
+OGCï¼šå½“å‰è€å¹´ä»£å¤§å°
+OC:å½“å‰è€å¹´ä»£å¤§å°
+MCMN:æœ€å°å…ƒæ•°æ®å®¹é‡
+MCMXï¼šæœ€å¤§å…ƒæ•°æ®å®¹é‡
+MCï¼šå½“å‰å…ƒæ•°æ®ç©ºé—´å¤§å°
+CCSMNï¼šæœ€å°åŽ‹ç¼©ç±»ç©ºé—´å¤§å°
+CCSMXï¼šæœ€å¤§åŽ‹ç¼©ç±»ç©ºé—´å¤§å°
+CCSCï¼šå½“å‰åŽ‹ç¼©ç±»ç©ºé—´å¤§å°
+YGCï¼šå¹´è½»ä»£gcæ¬¡æ•°
+FGCï¼šè€å¹´ä»£GCæ¬¡æ•°
 
-3¡¢jstat -gcnew 7172
-S0C£ºµÚÒ»¸öÐÒ´æÇø´óÐ¡
-S1C£ºµÚ¶þ¸öÐÒ´æÇøµÄ´óÐ¡
-S0U£ºµÚÒ»¸öÐÒ´æÇøµÄÊ¹ÓÃ´óÐ¡
-S1U£ºµÚ¶þ¸öÐÒ´æÇøµÄÊ¹ÓÃ´óÐ¡
-TT:¶ÔÏóÔÚÐÂÉú´ú´æ»îµÄ´ÎÊý
-MTT:¶ÔÏóÔÚÐÂÉú´ú´æ»îµÄ×î´ó´ÎÊý
-DSS:ÆÚÍûµÄÐÒ´æÇø´óÐ¡
-EC£ºÒÁµéÔ°ÇøµÄ´óÐ¡
-EU£ºÒÁµéÔ°ÇøµÄÊ¹ÓÃ´óÐ¡
-YGC£ºÄêÇá´úÀ¬»ø»ØÊÕ´ÎÊý
-YGCT£ºÄêÇá´úÀ¬»ø»ØÊÕÏûºÄÊ±¼ä
+3ã€jstat -gcnew 7172
+S0Cï¼šç¬¬ä¸€ä¸ªå¹¸å­˜åŒºå¤§å°
+S1Cï¼šç¬¬äºŒä¸ªå¹¸å­˜åŒºçš„å¤§å°
+S0Uï¼šç¬¬ä¸€ä¸ªå¹¸å­˜åŒºçš„ä½¿ç”¨å¤§å°
+S1Uï¼šç¬¬äºŒä¸ªå¹¸å­˜åŒºçš„ä½¿ç”¨å¤§å°
+TT:å¯¹è±¡åœ¨æ–°ç”Ÿä»£å­˜æ´»çš„æ¬¡æ•°
+MTT:å¯¹è±¡åœ¨æ–°ç”Ÿä»£å­˜æ´»çš„æœ€å¤§æ¬¡æ•°
+DSS:æœŸæœ›çš„å¹¸å­˜åŒºå¤§å°
+ECï¼šä¼Šç”¸å›­åŒºçš„å¤§å°
+EUï¼šä¼Šç”¸å›­åŒºçš„ä½¿ç”¨å¤§å°
+YGCï¼šå¹´è½»ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+YGCTï¼šå¹´è½»ä»£åžƒåœ¾å›žæ”¶æ¶ˆè€—æ—¶é—´
 
-4¡¢jstat -gcnewcapacity 7172
-NGCMN£ºÐÂÉú´ú×îÐ¡ÈÝÁ¿
-NGCMX£ºÐÂÉú´ú×î´óÈÝÁ¿
-NGC£ºµ±Ç°ÐÂÉú´úÈÝÁ¿
-S0CMX£º×î´óÐÒ´æ1Çø´óÐ¡
-S0C£ºµ±Ç°ÐÒ´æ1Çø´óÐ¡
-S1CMX£º×î´óÐÒ´æ2Çø´óÐ¡
-S1C£ºµ±Ç°ÐÒ´æ2Çø´óÐ¡
-ECMX£º×î´óÒÁµéÔ°Çø´óÐ¡
-EC£ºµ±Ç°ÒÁµéÔ°Çø´óÐ¡
-YGC£ºÄêÇá´úÀ¬»ø»ØÊÕ´ÎÊý
-FGC£ºÀÏÄê´ú»ØÊÕ´ÎÊý
+4ã€jstat -gcnewcapacity 7172
+NGCMNï¼šæ–°ç”Ÿä»£æœ€å°å®¹é‡
+NGCMXï¼šæ–°ç”Ÿä»£æœ€å¤§å®¹é‡
+NGCï¼šå½“å‰æ–°ç”Ÿä»£å®¹é‡
+S0CMXï¼šæœ€å¤§å¹¸å­˜1åŒºå¤§å°
+S0Cï¼šå½“å‰å¹¸å­˜1åŒºå¤§å°
+S1CMXï¼šæœ€å¤§å¹¸å­˜2åŒºå¤§å°
+S1Cï¼šå½“å‰å¹¸å­˜2åŒºå¤§å°
+ECMXï¼šæœ€å¤§ä¼Šç”¸å›­åŒºå¤§å°
+ECï¼šå½“å‰ä¼Šç”¸å›­åŒºå¤§å°
+YGCï¼šå¹´è½»ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCï¼šè€å¹´ä»£å›žæ”¶æ¬¡æ•°
 
-5¡¢jstat -gcold 7172
-MC£º·½·¨Çø´óÐ¡
-MU£º·½·¨ÇøÊ¹ÓÃ´óÐ¡
-CCSC:Ñ¹ËõÀà¿Õ¼ä´óÐ¡
-CCSU:Ñ¹ËõÀà¿Õ¼äÊ¹ÓÃ´óÐ¡
-OC£ºÀÏÄê´ú´óÐ¡
-OU£ºÀÏÄê´úÊ¹ÓÃ´óÐ¡
-YGC£ºÄêÇá´úÀ¬»ø»ØÊÕ´ÎÊý
-FGC£ºÀÏÄê´úÀ¬»ø»ØÊÕ´ÎÊý
-FGCT£ºÀÏÄê´úÀ¬»ø»ØÊÕÏûºÄÊ±¼ä
-GCT£ºÀ¬»ø»ØÊÕÏûºÄ×ÜÊ±¼ä
+5ã€jstat -gcold 7172
+MCï¼šæ–¹æ³•åŒºå¤§å°
+MUï¼šæ–¹æ³•åŒºä½¿ç”¨å¤§å°
+CCSC:åŽ‹ç¼©ç±»ç©ºé—´å¤§å°
+CCSU:åŽ‹ç¼©ç±»ç©ºé—´ä½¿ç”¨å¤§å°
+OCï¼šè€å¹´ä»£å¤§å°
+OUï¼šè€å¹´ä»£ä½¿ç”¨å¤§å°
+YGCï¼šå¹´è½»ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCTï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¶ˆè€—æ—¶é—´
+GCTï¼šåžƒåœ¾å›žæ”¶æ¶ˆè€—æ€»æ—¶é—´
 
-6¡¢jstat -gcoldcapacity 7172
-OGCMN£ºÀÏÄê´ú×îÐ¡ÈÝÁ¿
-OGCMX£ºÀÏÄê´ú×î´óÈÝÁ¿
-OGC£ºµ±Ç°ÀÏÄê´ú´óÐ¡
-OC£ºÀÏÄê´ú´óÐ¡
-YGC£ºÄêÇá´úÀ¬»ø»ØÊÕ´ÎÊý
-FGC£ºÀÏÄê´úÀ¬»ø»ØÊÕ´ÎÊý
-FGCT£ºÀÏÄê´úÀ¬»ø»ØÊÕÏûºÄÊ±¼ä
-GCT£ºÀ¬»ø»ØÊÕÏûºÄ×ÜÊ±¼ä
+6ã€jstat -gcoldcapacity 7172
+OGCMNï¼šè€å¹´ä»£æœ€å°å®¹é‡
+OGCMXï¼šè€å¹´ä»£æœ€å¤§å®¹é‡
+OGCï¼šå½“å‰è€å¹´ä»£å¤§å°
+OCï¼šè€å¹´ä»£å¤§å°
+YGCï¼šå¹´è½»ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCTï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¶ˆè€—æ—¶é—´
+GCTï¼šåžƒåœ¾å›žæ”¶æ¶ˆè€—æ€»æ—¶é—´
 
-7¡¢jstat -gcmetacapacity 7172
-MCMN:×îÐ¡ÔªÊý¾ÝÈÝÁ¿
-MCMX£º×î´óÔªÊý¾ÝÈÝÁ¿
-MC£ºµ±Ç°ÔªÊý¾Ý¿Õ¼ä´óÐ¡
-CCSMN£º×îÐ¡Ñ¹ËõÀà¿Õ¼ä´óÐ¡
-CCSMX£º×î´óÑ¹ËõÀà¿Õ¼ä´óÐ¡
-CCSC£ºµ±Ç°Ñ¹ËõÀà¿Õ¼ä´óÐ¡
-YGC£ºÄêÇá´úÀ¬»ø»ØÊÕ´ÎÊý
-FGC£ºÀÏÄê´úÀ¬»ø»ØÊÕ´ÎÊý
-FGCT£ºÀÏÄê´úÀ¬»ø»ØÊÕÏûºÄÊ±¼ä
-GCT£ºÀ¬»ø»ØÊÕÏûºÄ×ÜÊ±¼ä
+7ã€jstat -gcmetacapacity 7172
+MCMN:æœ€å°å…ƒæ•°æ®å®¹é‡
+MCMXï¼šæœ€å¤§å…ƒæ•°æ®å®¹é‡
+MCï¼šå½“å‰å…ƒæ•°æ®ç©ºé—´å¤§å°
+CCSMNï¼šæœ€å°åŽ‹ç¼©ç±»ç©ºé—´å¤§å°
+CCSMXï¼šæœ€å¤§åŽ‹ç¼©ç±»ç©ºé—´å¤§å°
+CCSCï¼šå½“å‰åŽ‹ç¼©ç±»ç©ºé—´å¤§å°
+YGCï¼šå¹´è½»ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCTï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¶ˆè€—æ—¶é—´
+GCTï¼šåžƒåœ¾å›žæ”¶æ¶ˆè€—æ€»æ—¶é—´
 
-8¡¢jstat -gcutil 7172
-S0£ºÐÒ´æ1Çøµ±Ç°Ê¹ÓÃ±ÈÀý
-S1£ºÐÒ´æ2Çøµ±Ç°Ê¹ÓÃ±ÈÀý
-E£ºÒÁµéÔ°ÇøÊ¹ÓÃ±ÈÀý
-O£ºÀÏÄê´úÊ¹ÓÃ±ÈÀý
-M£ºÔªÊý¾ÝÇøÊ¹ÓÃ±ÈÀý
-CCS£ºÑ¹ËõÊ¹ÓÃ±ÈÀý
-YGC£ºÄêÇá´úÀ¬»ø»ØÊÕ´ÎÊý
-FGC£ºÀÏÄê´úÀ¬»ø»ØÊÕ´ÎÊý
-FGCT£ºÀÏÄê´úÀ¬»ø»ØÊÕÏûºÄÊ±¼ä
-GCT£ºÀ¬»ø»ØÊÕÏûºÄ×ÜÊ±¼ä
+8ã€jstat -gcutil 7172
+S0ï¼šå¹¸å­˜1åŒºå½“å‰ä½¿ç”¨æ¯”ä¾‹
+S1ï¼šå¹¸å­˜2åŒºå½“å‰ä½¿ç”¨æ¯”ä¾‹
+Eï¼šä¼Šç”¸å›­åŒºä½¿ç”¨æ¯”ä¾‹
+Oï¼šè€å¹´ä»£ä½¿ç”¨æ¯”ä¾‹
+Mï¼šå…ƒæ•°æ®åŒºä½¿ç”¨æ¯”ä¾‹
+CCSï¼šåŽ‹ç¼©ä½¿ç”¨æ¯”ä¾‹
+YGCï¼šå¹´è½»ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¬¡æ•°
+FGCTï¼šè€å¹´ä»£åžƒåœ¾å›žæ”¶æ¶ˆè€—æ—¶é—´
+GCTï¼šåžƒåœ¾å›žæ”¶æ¶ˆè€—æ€»æ—¶é—´
 
 
-²é¿´Ä¬ÈÏJVM GCÊÕ¼¯Æ÷
+æŸ¥çœ‹é»˜è®¤JVM GCæ”¶é›†å™¨
 
 java -XX:+PrintCommandLineFlags -version
