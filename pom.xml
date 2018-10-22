@@ -66,6 +66,7 @@
     <module>learning-jdk8</module>
     <module>learning-nio2</module>
     <module>learning-spring-resolver</module>
+    <module>learning-proxy</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>
