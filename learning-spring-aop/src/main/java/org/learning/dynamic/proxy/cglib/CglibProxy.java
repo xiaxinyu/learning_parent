@@ -1,4 +1,4 @@
-package org.learning.spring.aop.proxy;
+package org.learning.dynamic.proxy.cglib;
 
 import java.lang.reflect.Method;
 
@@ -6,7 +6,7 @@ import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 
-public class CGLibProxy implements MethodInterceptor {
+public class CglibProxy implements MethodInterceptor {
 	private Object targetObject;
 
 	public Object createProxyObject(Object targetObject) {

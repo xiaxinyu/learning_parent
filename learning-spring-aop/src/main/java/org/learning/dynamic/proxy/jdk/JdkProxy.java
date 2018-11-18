@@ -1,10 +1,10 @@
-package org.learning.spring.aop.proxy;
+package org.learning.dynamic.proxy.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-public class JDKProxy implements InvocationHandler {
+public class JdkProxy implements InvocationHandler {
 	private Object targetObject;
 
 	public Object newProxy(Object targetObject) {
