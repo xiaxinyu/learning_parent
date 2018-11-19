@@ -15,7 +15,7 @@ public class Join {
 		System.out.println(Thread.currentThread().getName() + " terminate.");
 	}
 
-	static class Domino implements Runnable {
+	private static class Domino implements Runnable {
 		private Thread thread;
 
 		public Domino(Thread thread) {
