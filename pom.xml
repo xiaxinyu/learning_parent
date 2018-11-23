@@ -67,6 +67,7 @@
     <module>learning-nio2</module>
     <module>learning-spring-resolver</module>
     <module>learning-proxy</module>
+    <module>learning-spring-event</module>
   </modules>
 	<properties>
 		<junit.version>4.12</junit.version>

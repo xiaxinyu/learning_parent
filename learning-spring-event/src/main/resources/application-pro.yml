@@ -1,0 +1,7 @@
+app:
+  environment : pro
+  pom-path: /META-INF/maven/learning-parent/learning-springboot/pom.properties
+  
+spring:
+  freemarker:
+    template-loader-path: classpath:/pages 

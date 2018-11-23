@@ -1,0 +1,7 @@
+app:
+  environment : dev
+  pom-path: /target/maven-archiver/pom.properties
+  
+spring:
+  freemarker:
+    template-loader-path: classpath:/pages
