@@ -68,7 +68,8 @@
     <module>learning-spring-resolver</module>
     <module>learning-proxy</module>
     <module>learning-spring-event</module>
-  </modules>
+    <module>learning-protocol-http</module>
+	</modules>
 	<properties>
 		<junit.version>4.12</junit.version>
 		<log4j.version>1.2.17</log4j.version>

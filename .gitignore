@@ -51,3 +51,6 @@ java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you 
 .project
 learning-spring-cloud-zipkin-server/.springBeans
 learning-spring-cloud-sleuth-client1/.springBeans
+.DS_Store
+*.p
+*.class
