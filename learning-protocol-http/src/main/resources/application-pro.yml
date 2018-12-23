@@ -1,0 +1,6 @@
+app:
+  environment : pro
+  
+spring:
+  freemarker:
+    template-loader-path: classpath:/pages 
