@@ -11,9 +11,9 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-public class Application {
+public class ApplicationRibbon {
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(ApplicationRibbon.class, args);
 	}
 	
 	@Bean

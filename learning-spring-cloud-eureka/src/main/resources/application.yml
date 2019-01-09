@@ -4,6 +4,8 @@ server:
 eureka:
   instance:
     hostname: localhost
+  server:
+    eviction-interval-timer-in-ms: 3000 #启用主动失效，并且每次主动失效检测间隔为3s
   client:
     registerWithEureka: false
     fetchRegistry: false
