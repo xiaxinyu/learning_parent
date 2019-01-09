@@ -1,9 +1,25 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.179.133:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
+      
 server:
   port: 8764
+  
 spring:
   application:
-    name: SayHello-Ribbon
+    name: Ribbon-LoadBlance
+    
+info:
+  head: head
+  body: body
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' #加载所有的端点，默认只加载了info、health
+  endpoint:
+    health:
+      show-details: always
+    shutdown:  #可以关闭指定的端点
+      enabled: false
