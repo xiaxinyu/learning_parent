@@ -69,6 +69,7 @@
     <module>learning-proxy</module>
     <module>learning-spring-event</module>
     <module>learning-protocol-http</module>
+    <module>learning-spring-cloud-eureka-client2</module>
 	</modules>
 	<properties>
 		<junit.version>4.12</junit.version>
