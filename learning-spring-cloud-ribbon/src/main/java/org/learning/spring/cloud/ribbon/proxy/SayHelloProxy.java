@@ -1,15 +1,15 @@
-package org.learning.spring.cloud.ribbon.register;
+package org.learning.spring.cloud.ribbon.proxy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class HelloServiceRegister {
+public class SayHelloProxy {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	public String hiService(String name) {
-		return restTemplate.getForObject("http://sayHello/sayHello?name=" + name, String.class);
+	public String sayHello(String name) {
+		return restTemplate.getForObject("http://Eureka-Client/sayHello?name=" + name, String.class);
 	}
 }
