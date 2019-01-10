@@ -43,6 +43,8 @@
 		<module>learning-spring-cloud-ribbon</module>
 		<module>learning-spring-cloud-feign</module>
 		<module>learning-spring-cloud-hystrix-ribbon</module>
+		<module>learning-spring-cloud-hystrix-feign</module>
+		<module>learning-spring-cloud-hystrix-dashboard</module>
 		<module>learning-spring-cloud-zuul</module>
 		<module>learning-spring-cloud-config-server</module>
 		<module>learning-spring-cloud-config-client1</module>
@@ -51,7 +53,6 @@
 		<module>learning-spring-cloud-sleuth-client1</module>
 		<module>learning-spring-cloud-sleuth-miya</module>
 		<module>learning-spring-cloud-eureka-cluster</module>
-		<module>learning-spring-cloud-hystrix-dashboard</module>
 		<module>learning-spring-cloud-turbine</module>
 		<module>learning-spring-cloud-turbine-hystrix-first</module>
 		<module>learning-spring-cloud-turbine-hystrix-second</module>
