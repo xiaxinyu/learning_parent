@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>learning-parent</groupId>
 	<artifactId>learning-parent</artifactId>
@@ -33,43 +35,43 @@
 		<module>learning-annotation</module>
 		<module>learning-lock</module>
 		<module>learning-redis-distributed-lock</module>
+		<module>learning-concurrent</module>
+		<module>learning-java-volatile</module>
 		<module>learning-spring-cloud-eureka</module>
-    <module>learning-concurrent</module>
-    <module>learning-spring-cloud-eureka-client1</module>
-    <module>learning-spring-cloud-ribbon</module>
-    <module>learning-spring-cloud-feign</module>
-    <module>learning-java-volatile</module>
-    <module>learning-spring-cloud-hystrix</module>
-    <module>learning-spring-cloud-zuul</module>
-    <module>learning-spring-cloud-config-server</module>
-    <module>learning-spring-cloud-config-client1</module>
-    <module>learning-spring-cloud-bus-amqp</module>
-    <module>learning-spring-cloud-zipkin-server</module>
-    <module>learning-spring-cloud-sleuth-client1</module>
-    <module>learning-spring-cloud-sleuth-miya</module>
-    <module>learning-spring-cloud-eureka-cluster</module>
-    <module>learning-spring-cloud-hystrix-dashboard</module>
-    <module>learning-spring-cloud-turbine</module>
-    <module>learning-spring-cloud-turbine-hystrix-first</module>
-	<module>learning-spring-cloud-turbine-hystrix-second</module>
-    <module>learning-spring-cloud-consul</module>
-    <module>learning-bio</module>
-    <module>learning-reactor</module>
-    <module>learning-rabbitmq-producer</module>
-    <module>learning-rabbitmq-consumer</module>
-    <module>learning-spring-mvc</module>
-    <module>learning-mybatis</module>
-    <module>learning-spring-batch</module>
-    <module>learning-quartz</module>
-    <module>learning-java-cas</module>
-    <module>learning-big-data-hdfs</module>
-    <module>learning-jdk8</module>
-    <module>learning-nio2</module>
-    <module>learning-spring-resolver</module>
-    <module>learning-proxy</module>
-    <module>learning-spring-event</module>
-    <module>learning-protocol-http</module>
-    <module>learning-spring-cloud-eureka-client2</module>
+		<module>learning-spring-cloud-eureka-client1</module>
+		<module>learning-spring-cloud-eureka-client2</module>
+		<module>learning-spring-cloud-ribbon</module>
+		<module>learning-spring-cloud-feign</module>
+		<module>learning-spring-cloud-hystrix-ribbon</module>
+		<module>learning-spring-cloud-zuul</module>
+		<module>learning-spring-cloud-config-server</module>
+		<module>learning-spring-cloud-config-client1</module>
+		<module>learning-spring-cloud-bus-amqp</module>
+		<module>learning-spring-cloud-zipkin-server</module>
+		<module>learning-spring-cloud-sleuth-client1</module>
+		<module>learning-spring-cloud-sleuth-miya</module>
+		<module>learning-spring-cloud-eureka-cluster</module>
+		<module>learning-spring-cloud-hystrix-dashboard</module>
+		<module>learning-spring-cloud-turbine</module>
+		<module>learning-spring-cloud-turbine-hystrix-first</module>
+		<module>learning-spring-cloud-turbine-hystrix-second</module>
+		<module>learning-spring-cloud-consul</module>
+		<module>learning-bio</module>
+		<module>learning-reactor</module>
+		<module>learning-rabbitmq-producer</module>
+		<module>learning-rabbitmq-consumer</module>
+		<module>learning-spring-mvc</module>
+		<module>learning-mybatis</module>
+		<module>learning-spring-batch</module>
+		<module>learning-quartz</module>
+		<module>learning-java-cas</module>
+		<module>learning-big-data-hdfs</module>
+		<module>learning-jdk8</module>
+		<module>learning-nio2</module>
+		<module>learning-spring-resolver</module>
+		<module>learning-proxy</module>
+		<module>learning-spring-event</module>
+		<module>learning-protocol-http</module>
 	</modules>
 	<properties>
 		<junit.version>4.12</junit.version>
