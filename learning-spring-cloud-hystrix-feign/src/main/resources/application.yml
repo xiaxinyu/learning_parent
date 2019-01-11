@@ -13,3 +13,9 @@ server:
 spring:
   application:
     name: Hystrix-Feign
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

@@ -1,9 +1,11 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://peer1:8661/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
+      
 server:
-  port: 8766
+  port: 8769
+  
 spring:
   application:
-    name: SayHello-Hystrix
+    name: Hystrix-Dashboard
