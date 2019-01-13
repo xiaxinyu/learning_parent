@@ -73,7 +73,6 @@
 		<module>learning-proxy</module>
 		<module>learning-spring-event</module>
 		<module>learning-protocol-http</module>
-		<module>learning-rpc</module>
 	</modules>
 	<properties>
 		<junit.version>4.12</junit.version>
