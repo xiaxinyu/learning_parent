@@ -8,8 +8,8 @@
 		<artifactId>learning-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>learning-annotation</artifactId>
-	<name>learning-annotation</name>
+	<artifactId>learning-core-annotation</artifactId>
+	<name>learning-core-annotation</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
