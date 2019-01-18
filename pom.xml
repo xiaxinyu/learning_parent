@@ -15,7 +15,6 @@
 		<module>learning-java-basics</module>
 		<module>learning-frontend</module>
 		<module>learning-spring</module>
-		<module>learning-custom-annotation</module>
 		<module>learning-springboot</module>
 		<module>learning-zookeeper</module>
 		<module>learning-dubbo</module>
