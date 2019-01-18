@@ -12,6 +12,7 @@ import java.io.ObjectOutputStream;
  * Created by summer.xia on 2019.1.17
  */
 public class SerializeUtils {
+	
 	public static byte[] serialize(Object object) throws IOException {
 		ByteArrayOutputStream os = new ByteArrayOutputStream();
 		ObjectOutputStream outputStream = new ObjectOutputStream(os);
