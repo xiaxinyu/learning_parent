@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import com.core.serialization.utils.SerializeUtils;
 
-public class Test {
+public class TestSerializableLength {
 	public static void main(String[] args) throws IOException {
 		UserInfo info = new UserInfo();
 		info.buildUserInfo(123456789).buildUserName("summer");
