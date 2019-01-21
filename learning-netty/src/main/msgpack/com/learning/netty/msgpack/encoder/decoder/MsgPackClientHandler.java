@@ -8,6 +8,7 @@ public class MsgPackClientHandler extends ChannelInboundHandlerAdapter {
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		UserInfo[] userInfos = initUserInfoArray();
 		for (UserInfo userInfo : userInfos) {
+			//ctx.writeAndFlush(userInfo);
 			ctx.write(userInfo);
 		}
 		ctx.flush();
@@ -29,5 +30,11 @@ public class MsgPackClientHandler extends ChannelInboundHandlerAdapter {
 			userInfos[i] = userInfo;
 		}
 		return userInfos;
+	}
+	
+	@Override
+	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+		cause.printStackTrace();
+		ctx.close();
 	}
 }

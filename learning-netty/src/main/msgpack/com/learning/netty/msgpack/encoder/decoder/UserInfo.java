@@ -3,6 +3,9 @@ package com.learning.netty.msgpack.encoder.decoder;
 import java.io.Serializable;
 import java.nio.ByteBuffer;
 
+import org.msgpack.annotation.Message;
+
+@Message
 public class UserInfo implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String userName;
