@@ -3,7 +3,7 @@ package org.learning.jvm;
 import java.nio.ByteBuffer;
 
 public class DirectoryMemoryOOMError {
-	private static final int SIZE = 1024 * 1024 * 1024 * 1024;
+	private static final int SIZE = 1024 * 1024 * 1024 * 1024 * 1024 * 1024;
 	private static int count = 1;
 	private static boolean flag = true;
 
