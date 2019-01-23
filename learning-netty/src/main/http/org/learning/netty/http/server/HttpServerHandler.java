@@ -1,4 +1,4 @@
-package org.learning.netty.http.server.v1;
+package org.learning.netty.http.server;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
@@ -31,6 +31,7 @@ public class HttpServerHandler extends ChannelInboundHandlerAdapter {
 			HttpRequest req = (HttpRequest) msg;
 
 			boolean keepAlive = HttpUtil.isKeepAlive(req);
+			System.out.println(req);
 			FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK,
 					Unpooled.wrappedBuffer(CONTENT));
 			response.headers().set(CONTENT_TYPE, "text/plain");
