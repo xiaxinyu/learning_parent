@@ -1,4 +1,4 @@
-package org.learning.data.structure.map;
+package org.learning.data.structure.collection;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ public class ArrayListTest {
 			System.out.println(value);
 		}
 		
-		System.out.println(3>>1);
-		System.out.println(4>>1);
+		//ArrayList grow by this way which is oldCapacity + oldCapacity>>1(oldCapacity*0.5)
+		System.out.println(10>>1);
 	}
 }

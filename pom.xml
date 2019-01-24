@@ -9,7 +9,6 @@
 	<modules>
 		<module>learning-thread</module>
 		<module>learning-design-pattern</module>
-		<module>learning-data-structure</module>
 		<module>learning-algorithm</module>
 		<module>learning-java-basics</module>
 		<module>learning-frontend</module>
@@ -32,6 +31,8 @@
 		<module>learning-javaee</module>
 		<module>learning-classloader</module>
 		<module>learning-core-annotation</module>
+		<module>learning-core-data-structure</module>
+		<module>learning-core-serialization</module>
 		<module>learning-lock</module>
 		<module>learning-redis-distributed-lock</module>
 		<module>learning-concurrent</module>
@@ -72,7 +73,6 @@
 		<module>learning-proxy</module>
 		<module>learning-spring-event</module>
 		<module>learning-protocol-http</module>
-		<module>learning-core-serialization</module>
 	</modules>
 	<properties>
 		<junit.version>4.12</junit.version>

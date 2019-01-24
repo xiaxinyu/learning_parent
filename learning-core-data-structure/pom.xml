@@ -7,10 +7,8 @@
     <artifactId>learning-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>learning-parent</groupId>
-  <artifactId>learning-data-structure</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>learning-data-structure</name>
+  <artifactId>learning-core-data-structure</artifactId>
+  <name>learning-core-data-structure</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

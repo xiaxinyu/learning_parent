@@ -1,4 +1,4 @@
-package org.learning.data.structure.vector;
+package org.learning.data.structure.collection;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
