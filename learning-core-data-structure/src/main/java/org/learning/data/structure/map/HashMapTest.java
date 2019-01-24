@@ -6,6 +6,15 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+/**
+ *  1. Null element is allowed, hash code is 0.<br>
+ *  2. Same element will be covered.<br>
+ *  3. HashMap is implements with array + linked list + red-black tree<br>
+ *  4. DEFAULT_INITIAL_CAPACITY = 1 << 4 aka 16  && DEFAULT_LOAD_FACTOR = 0.75f;<br>
+ *  5. tree will be converted when the length of linked list  is over TREEIFY_THRESHOLD(8) <br>
+ *  6. resize will be invoked when ++size > threshold, threshold is capacity * loadfactor(0.75)<br>
+ *     Capacity and threshold will grow up twice each time.
+ */
 public class HashMapTest {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<String, String>();
