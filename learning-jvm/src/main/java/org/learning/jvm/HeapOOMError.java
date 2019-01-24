@@ -13,12 +13,12 @@ public class HeapOOMError {
 		while (flag) {
 			try {
 				i++;
-				list.add(ByteBuffer.allocate(1024));
+				list.add(ByteBuffer.allocate(1024*1024));
 			} catch (Throwable e) {
+				flag = false;
 				e.printStackTrace();
 			}
-			flag = false;
-			System.out.println("count=" + i);// 记录运行的次数
 		}
+		System.out.println("count=" + i);// 记录运行的次数
 	}
 }
