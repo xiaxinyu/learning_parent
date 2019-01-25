@@ -33,7 +33,7 @@
 		<module>learning-core-annotation</module>
 		<module>learning-core-data-structure</module>
 		<module>learning-core-serialization</module>
-		<module>learning-lock</module>
+		<module>learning-core-lock</module>
 		<module>learning-redis-distributed-lock</module>
 		<module>learning-concurrent</module>
 		<module>learning-java-volatile</module>
