@@ -58,7 +58,6 @@
 		<module>learning-spring-cloud-turbine-hystrix-second</module>
 		<module>learning-spring-cloud-consul</module>
 		<module>learning-bio</module>
-		<module>learning-reactor</module>
 		<module>learning-rabbitmq-producer</module>
 		<module>learning-rabbitmq-consumer</module>
 		<module>learning-spring-mvc</module>
