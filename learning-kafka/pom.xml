@@ -13,7 +13,7 @@
 
 	<properties>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
-		<spring.version>5.0.4.RELEASE</spring.version>
+		<spring.version>5.2.3.RELEASE</spring.version>
 		<spring.kafka>2.1.4.RELEASE</spring.kafka>
 		<jackson.version>2.9.4</jackson.version>
 	</properties>
