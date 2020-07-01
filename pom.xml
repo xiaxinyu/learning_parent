@@ -24,8 +24,6 @@
 		<module>learning-restclient</module>
 		<module>learning-spring-reactive</module>
 		<module>learning-nio</module>
-		<module>learning-jvm</module>
-		<module>learning-jvm-gc</module>
 		<module>learning-spring-aop</module>
 		<module>learning-spring-ioc</module>
 		<module>learning-javaee</module>
