@@ -13,7 +13,7 @@
 	<name>learning-rabbitmq Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<spring-boot-version>2.0.1.RELEASE</spring-boot-version>
+		<spring-boot-version>2.5.12</spring-boot-version>
 		<jackson.version>2.9.4</jackson.version>
 		<spring.test.version>5.0.5.RELEASE</spring.test.version>
 	</properties>
