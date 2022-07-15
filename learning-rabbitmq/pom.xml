@@ -14,7 +14,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<spring-boot-version>2.0.1.RELEASE</spring-boot-version>
-		<jackson.version>2.9.4</jackson.version>
+		<jackson.version>2.12.6.1</jackson.version>
 		<spring.test.version>5.0.5.RELEASE</spring.test.version>
 	</properties>
 
